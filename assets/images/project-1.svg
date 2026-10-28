@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p1Sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#14172a"/>
+      <stop offset="60%" stop-color="#2d1e38"/>
+      <stop offset="100%" stop-color="#4a2e3b"/>
+    </linearGradient>
+    <linearGradient id="p1Water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#181c2c"/>
+      <stop offset="100%" stop-color="#0c0d15"/>
+    </linearGradient>
+    <radialGradient id="p1MoonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8db" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#f5d47a" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#f5d47a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sky & Water -->
+  <rect width="800" height="340" fill="url(#p1Sky)"/>
+  <rect y="340" width="800" height="160" fill="url(#p1Water)"/>
+
+  <!-- Moon -->
+  <circle cx="620" cy="110" r="45" fill="url(#p1MoonGlow)"/>
+  <circle cx="620" cy="110" r="30" fill="#fffbe8"/>
+
+  <!-- Distant Mountain Ridges -->
+  <path d="M0 260 Q 200 200 420 230 T 800 220 L 800 340 L 0 340 Z" fill="#1b1c2b" opacity="0.7"/>
+  <path d="M0 290 Q 250 250 500 270 T 800 280 L 800 340 L 0 340 Z" fill="#13141f"/>
+
+  <!-- Japanese Tea Pavilion Silhouette -->
+  <path d="M140 340 L140 260 L120 260 L180 210 L260 210 L320 260 L300 260 L300 340 Z" fill="#0d0e17"/>
+  <!-- Curved eaves -->
+  <path d="M100 265 Q 220 230 340 265 L 320 250 Q 220 220 120 250 Z" fill="#0d0e17"/>
+  <path d="M160 215 Q 220 195 280 215 L 270 205 Q 220 188 170 205 Z" fill="#0d0e17"/>
+  <!-- Lit Shoji Window in Pavilion -->
+  <rect x="180" y="275" width="80" height="50" fill="#ffcf54" opacity="0.85"/>
+  <line x1="220" y1="275" x2="220" y2="325" stroke="#382212" stroke-width="2"/>
+  <line x1="180" y1="300" x2="260" y2="300" stroke="#382212" stroke-width="2"/>
+
+  <!-- Water Reflection of Window -->
+  <ellipse cx="220" cy="380" rx="35" ry="12" fill="#ffcf54" opacity="0.25"/>
+
+  <!-- Traditional Arched Bridge (Taiko-bashi) -->
+  <path d="M420 340 Q 530 280 640 340" fill="none" stroke="#a92a2b" stroke-width="8"/>
+  <path d="M430 340 Q 530 290 630 340" fill="none" stroke="#871e20" stroke-width="4"/>
+  <!-- Bridge posts -->
+  <line x1="480" y1="305" x2="480" y2="340" stroke="#6b1416" stroke-width="2.5"/>
+  <line x1="530" y1="292" x2="530" y2="340" stroke="#6b1416" stroke-width="2.5"/>
+  <line x1="580" y1="305" x2="580" y2="340" stroke="#6b1416" stroke-width="2.5"/>
+
+  <!-- Foreground Pine Branch -->
+  <path d="M0 60 Q 120 70 200 130" fill="none" stroke="#1d2c1f" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="160" cy="100" r="22" fill="#26382a" opacity="0.9"/>
+  <circle cx="200" cy="130" r="18" fill="#1e2e21" opacity="0.9"/>
+
+  <!-- Central Card Overlay with Edit Tag -->
+  <rect x="150" y="160" width="500" height="180" rx="10" fill="#13141edd" stroke="#d4af37" stroke-width="1.2"/>
+  <rect x="156" y="166" width="488" height="168" rx="8" fill="#1a1b26f2"/>
+  
+  <rect x="180" y="185" width="30" height="30" rx="4" fill="#a92a2b"/>
+  <text x="195" y="206" font-family="serif" font-size="14" font-weight="bold" fill="#fdfbf7" text-anchor="middle">壱</text>
+  
+  <text x="225" y="205" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="700" fill="#fdfbf7" letter-spacing="1">[PROJECT 1 SCREENSHOT]</text>
+  <text x="180" y="250" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" fill="#d6cebd">Placeholder artwork: Dusk Tea Pavilion &amp; Arched Bridge</text>
+  <text x="180" y="280" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" fill="#a89f8d">To use your own project image, update the &lt;img&gt; tag src in index.html</text>
+  <rect x="180" y="300" width="130" height="22" rx="4" fill="#2d2836" stroke="#d4af37" stroke-width="0.8"/>
+  <text x="245" y="315" font-family="sans-serif" font-size="10.5" fill="#f5cb5c" text-anchor="middle">Recommended: 800×500px</text>
+</svg>
+

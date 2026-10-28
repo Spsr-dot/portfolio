@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p3Sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#191322"/>
+      <stop offset="60%" stop-color="#341b2c"/>
+      <stop offset="100%" stop-color="#4e2b34"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#p3Sky)"/>
+
+  <!-- Pagoda Silhouette in twilight mist -->
+  <g transform="translate(140, 90)" fill="#100f17">
+    <!-- Spire (Sorin) -->
+    <line x1="60" y1="20" x2="60" y2="70" stroke="#100f17" stroke-width="4"/>
+    <circle cx="60" cy="20" r="5"/>
+    <circle cx="60" cy="35" r="4"/>
+    <circle cx="60" cy="50" r="4"/>
+    <!-- Tier 3 -->
+    <path d="M30 85 Q 60 70 90 85 L 80 105 L 40 105 Z"/>
+    <!-- Tier 2 -->
+    <path d="M20 120 Q 60 100 100 120 L 88 145 L 32 145 Z"/>
+    <!-- Tier 1 -->
+    <path d="M10 160 Q 60 135 110 160 L 95 190 L 25 190 Z"/>
+    <!-- Base structure -->
+    <rect x="25" y="190" width="70" height="150"/>
+  </g>
+
+  <!-- Distant Torii Gate in Mist -->
+  <g transform="translate(620, 220)">
+    <!-- Top lintel (kasagi) -->
+    <path d="M-50 0 Q 0 -8 50 0 L 45 8 Q 0 2 -45 8 Z" fill="#9e2a2b"/>
+    <!-- Lower tie-beam (nuki) -->
+    <rect x="-42" y="14" width="84" height="6" fill="#871e20"/>
+    <!-- Pillars -->
+    <rect x="-30" y="8" width="8" height="100" fill="#a92a2b"/>
+    <rect x="22" y="8" width="8" height="100" fill="#a92a2b"/>
+  </g>
+
+  <!-- Garden Mound and Bamboo -->
+  <path d="M0 380 Q 250 320 500 350 T 800 320 L 800 500 L 0 500 Z" fill="#131718"/>
+
+  <!-- Central Card Overlay with Edit Tag -->
+  <rect x="150" y="160" width="500" height="180" rx="10" fill="#13141edd" stroke="#d4af37" stroke-width="1.2"/>
+  <rect x="156" y="166" width="488" height="168" rx="8" fill="#1a1b26f2"/>
+  
+  <rect x="180" y="185" width="30" height="30" rx="4" fill="#a92a2b"/>
+  <text x="195" y="206" font-family="serif" font-size="14" font-weight="bold" fill="#fdfbf7" text-anchor="middle">参</text>
+  
+  <text x="225" y="205" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="700" fill="#fdfbf7" letter-spacing="1">[PROJECT 3 SCREENSHOT]</text>
+  <text x="180" y="250" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" fill="#d6cebd">Placeholder artwork: Dusk Pagoda Spire &amp; Torii Gate</text>
+  <text x="180" y="280" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" fill="#a89f8d">To use your own project image, update the &lt;img&gt; tag src in index.html</text>
+  <rect x="180" y="300" width="130" height="22" rx="4" fill="#2d2836" stroke="#d4af37" stroke-width="0.8"/>
+  <text x="245" y="315" font-family="sans-serif" font-size="10.5" fill="#f5cb5c" text-anchor="middle">Recommended: 800×500px</text>
+</svg>
+

@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgDusk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#181a29"/>
+      <stop offset="50%" stop-color="#2a1d2e"/>
+      <stop offset="100%" stop-color="#3d2331"/>
+    </linearGradient>
+    <linearGradient id="goldHaze" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#d4af37" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#d4af37" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="frameWood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6a432d"/>
+      <stop offset="50%" stop-color="#4a2c1d"/>
+      <stop offset="100%" stop-color="#321b10"/>
+    </linearGradient>
+    <radialGradient id="lanternGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd56b" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#e09038" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#e09038" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="washiGrain" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M0 20 Q10 18 20 20 T40 20" fill="none" stroke="#d4af37" stroke-width="0.3" stroke-opacity="0.15"/>
+      <circle cx="12" cy="8" r="0.8" fill="#d4af37" fill-opacity="0.2"/>
+      <circle cx="32" cy="28" r="0.6" fill="#d4af37" fill-opacity="0.15"/>
+    </pattern>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base Canvas -->
+  <rect width="600" height="750" fill="url(#bgDusk)"/>
+  <rect width="600" height="750" fill="url(#washiGrain)"/>
+
+  <!-- Warm Garden Dusk Aura -->
+  <circle cx="300" cy="300" r="180" fill="url(#lanternGlow)"/>
+
+  <!-- Distant Torii and Mountain Silhouette in Portrait Background -->
+  <path d="M120 480 Q 240 430 360 450 T 600 480 L 600 750 L 0 750 L 0 490 Z" fill="#151724" opacity="0.85"/>
+  <path d="M0 560 Q 200 520 400 540 T 600 570 L 600 750 L 0 750 Z" fill="#0e1017"/>
+
+  <!-- Traditional Silhouette of Surya (Respectful, Stylized & Clearly Marked Placeholder) -->
+  <g opacity="0.92">
+    <!-- Torso / Shoulders with traditional haori collar line -->
+    <path d="M160 750 C170 610 220 560 250 540 L280 520 L320 520 L350 540 C380 560 430 610 440 750 Z" fill="#1b1c2b"/>
+    <!-- Kimono / Collar fold lines with gold trim -->
+    <path d="M260 530 L300 640 L340 530" fill="none" stroke="#d4af37" stroke-width="1.8" stroke-opacity="0.5"/>
+    <path d="M280 570 L300 640 L320 570" fill="none" stroke="#a92a2b" stroke-width="1.5" stroke-opacity="0.6"/>
+    <!-- Neck -->
+    <path d="M275 520 L275 460 C285 463 315 463 325 460 L325 520 Z" fill="#252438"/>
+    <!-- Head silhouette -->
+    <ellipse cx="300" cy="400" rx="65" ry="78" fill="#222336"/>
+    <!-- Clean modern hair silhouette -->
+    <path d="M232 400 C230 340 255 315 300 310 C345 315 370 340 368 400 C368 360 350 330 300 325 C250 330 232 360 232 400 Z" fill="#161724"/>
+    <path d="M240 370 Q280 330 330 340 Q360 350 365 375 Q340 335 300 335 Q260 335 240 370 Z" fill="#2e2f47"/>
+  </g>
+
+  <!-- Framing Sakura Branch from Top Right -->
+  <g filter="url(#softGlow)">
+    <path d="M600 120 Q 500 130 440 180 T 360 210" fill="none" stroke="#3d271d" stroke-width="5" stroke-linecap="round"/>
+    <path d="M470 150 Q 430 140 400 160" fill="none" stroke="#3d271d" stroke-width="3" stroke-linecap="round"/>
+    <!-- Sakura Blossoms -->
+    <g transform="translate(440, 180)">
+      <circle cx="0" cy="0" r="14" fill="#fca5a5" opacity="0.85"/>
+      <circle cx="0" cy="0" r="5" fill="#f43f5e"/>
+    </g>
+    <g transform="translate(360, 210)">
+      <circle cx="0" cy="0" r="12" fill="#ffd1dc" opacity="0.9"/>
+      <circle cx="0" cy="0" r="4" fill="#e11d48"/>
+    </g>
+    <g transform="translate(400, 160)">
+      <circle cx="0" cy="0" r="10" fill="#fca5a5" opacity="0.85"/>
+      <circle cx="0" cy="0" r="3" fill="#be123c"/>
+    </g>
+    <g transform="translate(520, 125)">
+      <circle cx="0" cy="0" r="13" fill="#ffd1dc" opacity="0.85"/>
+      <circle cx="0" cy="0" r="4" fill="#e11d48"/>
+    </g>
+  </g>
+
+  <!-- Floating Sakura Petals -->
+  <path d="M220 280 C210 270 200 285 208 295 C216 305 230 290 220 280 Z" fill="#fca5a5" opacity="0.8"/>
+  <path d="M380 430 C370 420 360 435 368 445 C376 455 390 440 380 430 Z" fill="#ffd1dc" opacity="0.75"/>
+  <path d="M170 490 C162 482 154 495 160 503 C166 511 178 498 170 490 Z" fill="#fca5a5" opacity="0.7"/>
+
+  <!-- Traditional Decorative Border / Wooden Scroll Frame -->
+  <rect x="18" y="18" width="564" height="714" fill="none" stroke="url(#frameWood)" stroke-width="12" rx="4"/>
+  <rect x="28" y="28" width="544" height="694" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-opacity="0.8"/>
+  <rect x="34" y="34" width="532" height="682" fill="none" stroke="#a92a2b" stroke-width="0.8" stroke-opacity="0.5"/>
+
+  <!-- Ornate Golden Corner Brackets (Traditional Japanese Metalwork) -->
+  <g fill="#d4af37">
+    <!-- Top Left -->
+    <path d="M28 28 L60 28 L60 36 L36 36 L36 60 L28 60 Z"/>
+    <circle cx="44" cy="44" r="2.5" fill="#181a29"/>
+    <!-- Top Right -->
+    <path d="M572 28 L540 28 L540 36 L564 36 L564 60 L572 60 Z"/>
+    <circle cx="556" cy="44" r="2.5" fill="#181a29"/>
+    <!-- Bottom Left -->
+    <path d="M28 722 L60 722 L60 714 L36 714 L36 690 L28 690 Z"/>
+    <circle cx="44" cy="706" r="2.5" fill="#181a29"/>
+    <!-- Bottom Right -->
+    <path d="M572 722 L540 722 L540 714 L564 714 L564 690 L572 690 Z"/>
+    <circle cx="556" cy="706" r="2.5" fill="#181a29"/>
+  </g>
+
+  <!-- Clear Placeholder Information Label Badge (Artistic & Obvious for Replacement) -->
+  <g transform="translate(300, 645)">
+    <!-- Badge Background Plate -->
+    <rect x="-210" y="-35" width="420" height="70" rx="8" fill="#12131ca6" stroke="#d4af37" stroke-width="1.2" filter="url(#softGlow)"/>
+    <rect x="-206" y="-31" width="412" height="62" rx="6" fill="#1c1a24ee"/>
+    
+    <!-- Red Accent Hanko Tag -->
+    <rect x="-195" y="-22" width="44" height="44" rx="4" fill="#a92a2b"/>
+    <text x="-173" y="6" font-family="'Cinzel', 'Noto Serif JP', Georgia, serif" font-size="14" font-weight="bold" fill="#fdfbf7" text-anchor="middle">印</text>
+    
+    <!-- Text Information -->
+    <text x="-135" y="-5" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="700" fill="#fdfbf7" letter-spacing="1">PORTRAIT PLACEHOLDER</text>
+    <text x="-135" y="16" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" fill="#e8dcc4">Replace: assets/images/portrait.jpg</text>
+  </g>
+
+  <!-- Name and Age Inscription at Top -->
+  <g transform="translate(300, 75)">
+    <rect x="-160" y="-18" width="320" height="34" rx="4" fill="#181720cc" stroke="#d4af37" stroke-width="0.8"/>
+    <text x="0" y="4" font-family="'Cinzel', 'Noto Serif JP', Georgia, serif" font-size="13" font-weight="600" fill="#ffd180" letter-spacing="2" text-anchor="middle">SURYA PRATAP SINGH RATHORE</text>
+  </g>
+</svg>
+

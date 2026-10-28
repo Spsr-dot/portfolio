@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p2Sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#121829"/>
+      <stop offset="60%" stop-color="#212a3d"/>
+      <stop offset="100%" stop-color="#3c3848"/>
+    </linearGradient>
+    <radialGradient id="lanternGlow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd269" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#f59e0b" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#p2Sky)"/>
+
+  <!-- Bamboo grove silhouettes in background -->
+  <g fill="#18241d" opacity="0.6">
+    <rect x="50" y="0" width="12" height="500"/>
+    <rect x="80" y="0" width="8" height="500"/>
+    <rect x="120" y="0" width="14" height="500"/>
+    <rect x="680" y="0" width="10" height="500"/>
+    <rect x="710" y="0" width="14" height="500"/>
+    <rect x="740" y="0" width="8" height="500"/>
+  </g>
+
+  <!-- Garden Path & Stone Stepping Stones -->
+  <path d="M100 500 Q 300 420 400 360 T 600 320" fill="none" stroke="#2a2936" stroke-width="40"/>
+  <ellipse cx="200" cy="460" rx="35" ry="14" fill="#3f3e4e"/>
+  <ellipse cx="320" cy="410" rx="30" ry="12" fill="#4a495c"/>
+  <ellipse cx="420" cy="370" rx="26" ry="10" fill="#3f3e4e"/>
+
+  <!-- Traditional Stone Lantern (Toro) -->
+  <g transform="translate(620, 240)">
+    <!-- Glow -->
+    <circle cx="0" cy="50" r="70" fill="url(#lanternGlow2)"/>
+    <!-- Lantern Cap (Kasa) -->
+    <path d="M-40 40 Q 0 20 40 40 L 35 30 Q 0 15 -35 30 Z" fill="#2d303a"/>
+    <path d="M-5 15 L 5 15 L 0 5 Z" fill="#2d303a"/>
+    <!-- Fire Chamber (Hibukuro) -->
+    <rect x="-20" y="40" width="40" height="25" fill="#ffe082"/>
+    <rect x="-16" y="44" width="32" height="17" fill="#ffb74d"/>
+    <!-- Base & Stem -->
+    <rect x="-10" y="65" width="20" height="40" fill="#2d303a"/>
+    <path d="M-25 105 L 25 105 L 30 120 L -30 120 Z" fill="#232630"/>
+  </g>
+
+  <!-- Sakura Petals drifting -->
+  <circle cx="280" cy="180" r="6" fill="#fca5a5" opacity="0.8"/>
+  <circle cx="480" cy="120" r="5" fill="#ffd1dc" opacity="0.85"/>
+  <circle cx="580" cy="190" r="7" fill="#fca5a5" opacity="0.75"/>
+
+  <!-- Central Card Overlay with Edit Tag -->
+  <rect x="150" y="160" width="500" height="180" rx="10" fill="#13141edd" stroke="#d4af37" stroke-width="1.2"/>
+  <rect x="156" y="166" width="488" height="168" rx="8" fill="#1a1b26f2"/>
+  
+  <rect x="180" y="185" width="30" height="30" rx="4" fill="#a92a2b"/>
+  <text x="195" y="206" font-family="serif" font-size="14" font-weight="bold" fill="#fdfbf7" text-anchor="middle">弐</text>
+  
+  <text x="225" y="205" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="700" fill="#fdfbf7" letter-spacing="1">[PROJECT 2 SCREENSHOT]</text>
+  <text x="180" y="250" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" fill="#d6cebd">Placeholder artwork: Stone Lantern (Tōrō) &amp; Garden Path</text>
+  <text x="180" y="280" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" fill="#a89f8d">To use your own project image, update the &lt;img&gt; tag src in index.html</text>
+  <rect x="180" y="300" width="130" height="22" rx="4" fill="#2d2836" stroke="#d4af37" stroke-width="0.8"/>
+  <text x="245" y="315" font-family="sans-serif" font-size="10.5" fill="#f5cb5c" text-anchor="middle">Recommended: 800×500px</text>
+</svg>
+
