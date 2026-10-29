@@ -1,102 +1,120 @@
 # Surya Pratap Singh Rathore — Personal Portfolio
 
-A cinematic, interactive personal portfolio website inspired by a tranquil **Japanese Garden at Dusk (Spring)**. Crafted with semantic HTML5, modern responsive CSS, and vanilla JavaScript.
+An ultra-advanced, interactive, cinematic personal portfolio website inspired by a tranquil **Japanese Garden (Zen & Bushido Aesthetic)**. Crafted with semantic HTML5, modern modular CSS with design tokens, and zero-dependency vanilla JavaScript.
 
 ---
 
-## 🌸 Experience & Art Direction
+## 🌸 Flagship Features & Art Direction
 
-- **First Visit Gate-Opening Intro**: Traditional Japanese wooden lattice (Shoji/Fusuma) gates slide apart smoothly to reveal the portfolio garden upon clicking **"Enter the Portfolio"**. Includes an instant **"Skip Intro"** button and replay controls.
-- **Atmospheric Dusk Garden Scenery**: Layered twilight sky, crescent moon glow, silhouette of a traditional Japanese tea house with warm glowing shoji windows, a stone lantern (*tōrō*), an arched vermilion bridge (*taiko-bashi*), and tranquil water reflections.
-- **Falling Sakura Petals**: A lightweight, 60fps HTML5 Canvas particle simulation with natural fluttering, wind drift, and 3D rotation. Automatically pauses when the browser tab is hidden and respects `prefers-reduced-motion`.
-- **Handcrafted Bamboo Navigation & Buttons**: Tactile wooden plates with beveled edges, wood grain, restrained shadows, and warm golden highlights.
-- **Katana Cut Interaction**: Clicking any bamboo button unleashes a swift, razor-sharp diagonal katana slash across the plate with a subtle split effect before smooth navigation.
-- **Katana Desktop Cursor**: Sleek Japanese blade cursor with warm-white and cherry blossom glint effects on click (active only on desktop pointer devices; automatically disabled on touchscreens and for reduced-motion preferences).
-- **Accessible & High-Contrast**: Washi parchment and rice-paper panels ensure AAA text readability against the atmospheric twilight backdrop.
+### 1. Procedural Web Audio Soundscape (Zen Audio Engine)
+- **Zero Audio Files Required**: 100% procedurally synthesized in real-time using the **Web Audio API**. Zero latency, 0kB external file weight, works completely offline.
+- **Procedural Elements**:
+  - **Japanese Wind Chime (*Fūrin* 風鈴)**: High pentatonic Hirajoshi/Insen bell harmonics with crystalline resonance.
+  - **Katana Slash (*Iaijutsu* 居合術)**: Filtered noise frequency sweep with metallic blade ring.
+  - **Bamboo Water Fountain (*Shishi-odoshi* 鹿威し)**: Falling sine water plinks and hollow bamboo strikes on stone.
+  - **Temple Singing Bowl (*Rin* 鈴)**: Deep harmonic resonance celebrating transitions.
+  - **Ambient Garden Breeze**: Filtered binaural pink noise with intermittent natural chimes.
+- Accessible **Sound Controller** in the navbar with animated equalizer bars.
+
+### 2. Atmospheric Time-of-Day & Weather Engine
+Live atmosphere switcher with four distinct garden moods:
+- **Dusk (*Yuugure* 夕暮れ)**: Warm shoji lantern glow, crimson twilight sky, crescent moon, falling cherry blossom petals.
+- **Midnight (*Tsukiyo* 月夜)**: Obsidian starry night, glowing **Hotaru (蛍)** fireflies rising from the pond with bioluminescent pulsation, cool silver moonlight.
+- **Dawn (*Akebono* 曙)**: Lavender-rose sunrise, golden morning mist, peach horizon glow.
+- **Day (*Komorebi* 木漏れ日)**: Crisp sunlight filtering through bamboo leaves, turquoise reflections, fresh green petals.
+
+### 3. Interactive Reflecting Koi Pond (*Nishikigoi* 錦鯉)
+- Procedural Japanese Koi fish swimming in an interactive reflecting pond canvas.
+- Sinuous multi-segment spine undulation physics with pectoral and caudal fin animations.
+- **Interactive Feeding & Waves**: Click or tap anywhere in the pond to drop food pellets; nearby Koi immediately detect and swim toward the food with ripple physics.
+- Automatic viewport observer to pause rendering when off-screen to preserve CPU and battery.
+
+### 4. Torii Shell ⛩️ (Interactive Developer CLI)
+- Floating retro-zen developer terminal accessible via hotkey `` ` `` (backtick/tilde) or the navbar button.
+- Built-in commands:
+  - `help`: list available terminal commands
+  - `about`: Surya's background, education, and focus
+  - `projects`: summary list of flagship software systems
+  - `skills`: categorized technical proficiencies
+  - `theme [dusk|midnight|dawn|day]`: live shift garden atmosphere
+  - `audio [on|off]`: toggle soundscape
+  - `koi feed`: toss food into the pond
+  - `quote`: reveal Japanese idioms (*Kaizen*, *Shoshin*, *Ichigo Ichie*, *Kintsugi*)
+  - `slash`: execute a katana strike
+  - `contact`: display direct communication channels
+  - `clear`: clear terminal screen
+
+### 5. Filterable Projects & "Scroll of Project Secrets" Modal
+- Real-time instant search bar and category filter pills (`All`, `AI & Autonomous Systems`, `Cloud & Infrastructure`, `Creative Tech & Systems`).
+- Four flagship projects tailored to Surya's systems engineering focus:
+  1. **FlowPilot AI**: Autonomous Multi-Agent Orchestrator
+  2. **SiteGuard Pro**: Cloud Infrastructure & Threat Monitor
+  3. **Archon Season 2**: Game Physics & Creative Canvas Engine
+  4. **Server-Logs Streamer**: Real-Time High-Throughput Log Aggregator
+- **Scroll of Project Secrets Modal**: Deep technical breakdown covering system overview, architectural rationale, and performance metric benchmarks.
+
+### 6. Interactive Dojo Skills Matrix
+- Category tabs filtering by Languages, Frontend, Cloud/DevOps, and AI Systems.
+- Animated proficiency progress bars, technology badges, and hover tooltips.
+
+### 7. Authentic Katana Blade Cursor & Tactile Controls
+- Custom SVG katana blade pointer with sparks and trailing gleam on pointer down.
+- Bamboo button slash animations with diagonal split effect.
 
 ---
 
-## 📁 File Structure
+## 📁 Architecture & File Structure
 
 ```text
-├── index.html                           # Main portfolio markup & editable placeholders
+├── index.html                           # Semantic markup, modals & accessible structure
 ├── css/
-│   └── style.css                        # Complete styles, design tokens, & animations
+│   └── style.css                        # Complete tokens, atmospheric themes & responsive styles
 ├── js/
-│   └── main.js                          # Gate intro, sakura simulation, katana effects, scrollspy
+│   ├── audio.js                         # Procedural Web Audio synthesis engine (chimes, slash, water)
+│   ├── theme.js                         # Time-of-day atmospheric controller (Dusk, Night, Dawn, Day)
+│   ├── koi.js                           # Procedural swimming Nishikigoi fish & ripple physics
+│   ├── projects.js                      # Searchable projects gallery & detail modal controller
+│   ├── terminal.js                      # Torii Shell ⛩️ interactive developer CLI
+│   └── main.js                          # Particle canvas, gate intro, katana effects & scrollspy
 ├── assets/
 │   ├── icons/
 │   │   └── katana-cursor.svg            # Custom Katana SVG pointer
 │   └── images/
-│       ├── portrait-placeholder.svg     # Stylized Japanese scroll portrait placeholder
-│       ├── project-1.svg                # Project 1 dusk pavilion preview
-│       ├── project-2.svg                # Project 2 stone lantern preview
-│       ├── project-3.svg                # Project 3 pagoda spire preview
-│       └── project-4.svg                # Project 4 mountain reflection preview
+│       ├── portrait-placeholder.svg     # Stylized Japanese scroll portrait
+│       ├── project-1.svg                # FlowPilot AI preview
+│       ├── project-2.svg                # SiteGuard Pro preview
+│       ├── project-3.svg                # Archon Season 2 preview
+│       └── project-4.svg                # Server-Logs preview
 └── README.md
 ```
 
 ---
 
-## 🛠️ How to Customize Your Information
+## 🚀 Running the Portfolio Locally
 
-Every piece of information has been cleanly labeled with `[Placeholder]` tags and code comments throughout `index.html`.
+Run a simple local web server in the project directory:
 
-### 1. Replacing Your Portrait
-1. Place your photo inside `assets/images/` (e.g. `assets/images/portrait.jpg`).
-2. Open `index.html` and locate line ~182:
-   ```html
-   <img 
-     src="assets/images/portrait.jpg" 
-     alt="Portrait of Surya Pratap Singh Rathore" 
-     class="portrait-img"
-   >
-   ```
+```bash
+# Python
+python3 -m http.server 8000
 
-### 2. Updating Your Introduction
-In `index.html` under `<section id="hero">`, update the text inside `.hero-intro-card`:
-```html
-<p class="hero-intro-text">
-  [Write your introduction here...]
-</p>
+# Node.js
+npx serve .
 ```
 
-### 3. Updating Your Biography & Facts
-In `index.html` under `<section id="about">`:
-- **Current Role / Focus**: Update `[Add your title / current focus]`
-- **Location**: Update `[Add your location / timezone]`
-- **Biography**: Edit the paragraphs inside `.bio-placeholder-box`
-- **Pillars**: Customize your education, hobbies, and personal philosophy cards.
-
-### 4. Updating Skills
-In `index.html` under `<section id="skills">`:
-- Replace the tags inside each category card with your actual technical stack, programming languages, and creative proficiencies.
-
-### 5. Adding Your Projects
-In `index.html` under `<section id="projects">`:
-- For each `.project-card`:
-  - Update `src="..."` with your screenshot.
-  - Update the Project Title, Category Tag, Technology Pills, and Description.
-  - Replace the links (`href="..."`) for Live Demo and Source Code.
-
-### 6. Updating Contact Details & Social Links
-In `index.html` under `<section id="contact">`:
-- Update `[Add your email: e.g. contact@example.com]`.
-- Add your actual URLs to the social links (`GitHub`, `LinkedIn`, `X/Twitter`, etc.).
+Then visit [http://localhost:8000](http://localhost:8000) in your browser.
 
 ---
 
-## 🚀 How to Run
+## 🌐 Live Deployment
 
-Simply double-click `index.html` to open it directly in any modern web browser (Chrome, Safari, Firefox, Edge).
+Hosted for free on GitHub Pages:
+- **Live URL:** [https://spsr-dot.github.io/portfolio/](https://spsr-dot.github.io/portfolio/)
+- **Repository:** [https://github.com/Spsr-dot/portfolio](https://github.com/Spsr-dot/portfolio)
 
-Alternatively, run a simple local web server:
-```bash
-# Using Python
-python3 -m http.server 8000
+---
 
-# Using Node.js
-npx serve .
-```
-Then visit `http://localhost:8000` in your browser.
+## 📜 License & Credits
 
+Crafted with dedication by **Surya Pratap Singh Rathore** (Age 19).
+Open source under the [MIT License](LICENSE).

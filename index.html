@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dusk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Surya Pratap Singh Rathore — Personal Portfolio. An interactive cinematic journey through a Japanese garden at dusk.">
+  <meta name="description" content="Surya Pratap Singh Rathore — Personal Portfolio. An interactive cinematic journey through a Japanese garden, featuring autonomous AI systems, cloud architecture, and creative web engineering.">
   <title>Surya Pratap Singh Rathore — Personal Portfolio</title>
 
   <!-- Google Fonts: Elegant Serifs and Clean Modern Sans-Serif -->
@@ -59,9 +59,9 @@
     <!-- Center Wooden Plaque & Call to Action -->
     <div class="gate-center-plaque">
       <div class="plaque-hanko" aria-hidden="true">開</div>
-      <p class="plaque-subtitle">Spring Garden at Dusk</p>
+      <p class="plaque-subtitle">Zen Garden Portfolio</p>
       <h1 class="plaque-title">Surya Pratap Singh Rathore</h1>
-      <p class="plaque-desc">Step across the threshold into a peaceful traditional garden portfolio.</p>
+      <p class="plaque-desc">Step across the threshold into an interactive garden of engineering, systems, and creative code.</p>
       
       <button id="btn-enter-portfolio" class="btn-bamboo btn-bamboo-primary" type="button">
         <span>Enter the Portfolio</span>
@@ -82,11 +82,8 @@
 
     <!-- Layer 1: Distant Mountain Ridges & Mist -->
     <svg class="scenery-layer scenery-mountains" viewBox="0 0 1440 450" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Distant hazy ridge -->
       <path d="M0 240 Q 320 160 720 210 T 1440 190 L 1440 450 L 0 450 Z" fill="#1b1c2e" opacity="0.6"/>
-      <!-- Mid-distance ridge -->
       <path d="M0 290 Q 420 220 860 260 T 1440 270 L 1440 450 L 0 450 Z" fill="#131422" opacity="0.85"/>
-      <!-- Soft ground base -->
       <path d="M0 370 Q 500 320 1000 350 T 1440 340 L 1440 450 L 0 450 Z" fill="#0c0d16"/>
     </svg>
 
@@ -97,13 +94,10 @@
       <ellipse cx="380" cy="330" rx="220" ry="24" fill="#ffcc44" opacity="0.12"/>
       <ellipse cx="1120" cy="340" rx="90" ry="14" fill="#ffb300" opacity="0.18"/>
 
-      <!-- Traditional Japanese Tea House Silhouette (Left-Middle ground) -->
+      <!-- Traditional Japanese Tea House Silhouette -->
       <g fill="#0e0f18">
-        <!-- Main Roof with Curved Eaves (Irimoya-zukuri style) -->
         <path d="M220 220 Q 380 180 540 220 L 520 205 Q 380 170 240 205 Z"/>
-        <!-- Upper Ridge & Roof Cap -->
         <path d="M290 175 Q 380 150 470 175 L 455 160 Q 380 142 305 160 Z"/>
-        <!-- Veranda & Pillars (Engawa) -->
         <rect x="250" y="218" width="260" height="64"/>
       </g>
 
@@ -121,16 +115,12 @@
 
       <!-- Traditional Stone Lantern (Tōrō) on right bank -->
       <g transform="translate(1120, 200)">
-        <!-- Fire Chamber Glow -->
         <circle cx="0" cy="55" r="45" fill="#f59e0b" opacity="0.3" class="window-lantern-glow"/>
         <circle cx="0" cy="55" r="22" fill="#ffd54f" opacity="0.8" class="window-lantern-glow"/>
-        <!-- Stone Cap (Kasa) -->
         <path d="M-35 45 Q 0 25 35 45 L 30 35 Q 0 18 -30 35 Z" fill="#1b1d28"/>
         <circle cx="0" cy="18" r="5" fill="#1b1d28"/>
-        <!-- Fire Chamber Slits -->
         <rect x="-18" y="45" width="36" height="20" fill="#ffa000" opacity="0.9"/>
         <rect x="-5" y="45" width="10" height="20" fill="#1b1d28"/>
-        <!-- Stem & Base (Sao & Kiso) -->
         <rect x="-8" y="65" width="16" height="35" fill="#181a24"/>
         <path d="M-22 100 L 22 100 L 26 115 L -26 115 Z" fill="#151620"/>
       </g>
@@ -147,11 +137,9 @@
 
     <!-- Layer 3: Foreground Cherry Blossom & Pine Branches Framing Page Corners -->
     <svg class="scenery-branches" viewBox="0 0 1440 900" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Top-Left Sakura Branch -->
       <g opacity="0.85">
         <path d="M-20 -20 Q 180 40 280 140 T 360 220" stroke="#251610" stroke-width="6" stroke-linecap="round"/>
         <path d="M120 40 Q 180 30 220 70" stroke="#251610" stroke-width="3.5" stroke-linecap="round"/>
-        <!-- Blossoms -->
         <circle cx="280" cy="140" r="14" fill="#fca5a5"/>
         <circle cx="280" cy="140" r="5" fill="#e11d48"/>
         <circle cx="360" cy="220" r="11" fill="#ffd1dc"/>
@@ -159,8 +147,6 @@
         <circle cx="220" cy="70" r="13" fill="#fca5a5"/>
         <circle cx="160" cy="45" r="12" fill="#ffd1dc"/>
       </g>
-
-      <!-- Top-Right Pine Branch -->
       <g opacity="0.75">
         <path d="M1460 -20 Q 1300 30 1200 110 T 1100 170" stroke="#1b241c" stroke-width="5" stroke-linecap="round"/>
         <circle cx="1200" cy="110" r="24" fill="#243627" opacity="0.9"/>
@@ -170,7 +156,7 @@
     </svg>
   </div>
 
-  <!-- Falling Sakura Petals Particle Simulation Canvas -->
+  <!-- Falling Sakura Petals & Hotaru Fireflies Canvas -->
   <canvas id="sakura-canvas" aria-hidden="true"></canvas>
 
   <!-- =========================================================================
@@ -182,7 +168,7 @@
       <div class="nav-seal" aria-hidden="true">駿</div>
       <div class="nav-name-group">
         <span class="nav-name">Surya Pratap Singh Rathore</span>
-        <span class="nav-sub">Portfolio • Age 19</span>
+        <span class="nav-sub">Full-Stack &amp; AI Systems • Age 19</span>
       </div>
     </a>
 
@@ -197,12 +183,47 @@
       </ul>
     </nav>
 
-    <!-- Nav Actions (Replay Gate Intro & Mobile Drawer Toggle) -->
-    <div class="nav-actions">
-      <button id="btn-replay-intro" class="btn-replay-intro" type="button" aria-label="Replay garden gate intro">
-        <span aria-hidden="true">🌸</span> Replay Intro
+    <!-- Nav Actions (Atmosphere, Audio, Torii Shell & Mobile Menu) -->
+    <div class="nav-actions" style="display:flex; align-items:center; gap:8px;">
+      
+      <!-- Atmospheric Theme Switcher -->
+      <div class="theme-switcher" role="radiogroup" aria-label="Garden Atmosphere">
+        <button type="button" class="theme-btn active" data-theme-target="dusk" title="Dusk (夕暮れ)">
+          <span>夕</span>
+        </button>
+        <button type="button" class="theme-btn" data-theme-target="midnight" title="Midnight Fireflies (月夜)">
+          <span>夜</span>
+        </button>
+        <button type="button" class="theme-btn" data-theme-target="dawn" title="Dawn Mist (曙)">
+          <span>曙</span>
+        </button>
+        <button type="button" class="theme-btn" data-theme-target="day" title="Sunlit Day (木漏れ日)">
+          <span>昼</span>
+        </button>
+      </div>
+
+      <!-- Procedural Web Audio Soundscape Toggle -->
+      <button id="btn-sound-toggle" class="btn-sound-toggle" type="button" aria-pressed="false" title="Garden Soundscape: OFF (Click to unmute)">
+        <div class="sound-bars" aria-hidden="true">
+          <span class="sound-bar"></span>
+          <span class="sound-bar"></span>
+          <span class="sound-bar"></span>
+        </div>
+        <span class="sound-toggle-label">Audio: Off</span>
       </button>
 
+      <!-- Torii Shell Terminal Modal Trigger -->
+      <button class="btn-bamboo btn-open-terminal" type="button" title="Open Torii CLI Terminal (Press `)" style="padding: 6px 12px; font-size: 0.82rem;">
+        <span aria-hidden="true">⛩️</span>
+        <span>CLI [ ` ]</span>
+      </button>
+
+      <!-- Replay Gate Intro Button -->
+      <button id="btn-replay-intro" class="btn-replay-intro" type="button" aria-label="Replay garden gate intro">
+        <span aria-hidden="true">🌸</span> Replay
+      </button>
+
+      <!-- Mobile Menu Toggle -->
       <button id="mobile-menu-toggle" class="mobile-menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
         ☰
       </button>
@@ -220,11 +241,11 @@
     <section id="hero" class="garden-section hero-section" aria-labelledby="hero-heading">
       <div class="hero-grid">
         
-        <!-- Left Column: Name, Intro Placeholder, Actions -->
+        <!-- Left Column: Name, Bio, Actions -->
         <div class="hero-content">
           <div class="hero-pill-badge">
             <span class="badge-dot" aria-hidden="true"></span>
-            <span>Age 19 • Traditional Garden Portfolio</span>
+            <span>Age 19 • Full-Stack Software Engineer &amp; AI Systems Developer</span>
           </div>
 
           <h1 id="hero-heading" class="hero-name">
@@ -232,63 +253,75 @@
             Rathore
           </h1>
 
-          <!-- EDIT HERE: Short Introduction Placeholder -->
           <div class="hero-intro-card">
             <p class="hero-intro-text">
-              [Write a short introduction about yourself here. For example: Welcome to my quiet corner of the web. I am 19 years old and passionate about technology, creative development, and thoughtful design. Feel free to wander through my garden of works and connect with me below.]
+              Welcome to my digital garden. At 19, I architect autonomous multi-agent pipelines, resilient cloud infrastructure, and cinematic web experiences. Driven by the philosophy of <em>Kaizen</em> (continuous refinement) and <em>Shoshin</em> (beginner’s mind), I transform complex software hurdles into intuitive, high-performance systems.
             </p>
-            <span class="edit-tag">✎ Editable Placeholder: index.html</span>
           </div>
 
           <!-- Bamboo Action Buttons -->
           <div class="hero-cta-group">
             <a href="#projects" class="btn-bamboo btn-bamboo-primary">
-              <span>Explore Projects</span>
+              <span>Explore Works</span>
               <span class="btn-kanji" aria-hidden="true">目録</span>
             </a>
             <a href="#about" class="btn-bamboo btn-bamboo-secondary">
               <span>About Me</span>
               <span class="btn-kanji" aria-hidden="true">略歴</span>
             </a>
+            <button type="button" class="btn-bamboo btn-open-terminal" style="border-color: var(--gold-warm);">
+              <span>Torii Shell ⛩️</span>
+              <span class="btn-kanji" aria-hidden="true">端末</span>
+            </button>
           </div>
         </div>
 
         <!-- Right Column: Animated Portrait Placeholder -->
         <div class="hero-portrait-wrapper">
           <div class="portrait-frame">
-            <!-- Traditional Golden Corner Knots -->
             <div class="portrait-knot tl" aria-hidden="true"></div>
             <div class="portrait-knot tr" aria-hidden="true"></div>
             <div class="portrait-knot bl" aria-hidden="true"></div>
             <div class="portrait-knot br" aria-hidden="true"></div>
 
             <div class="portrait-inner">
-              <!-- EDIT HERE: Replace portrait-placeholder.svg with your real photograph (e.g. assets/images/portrait.jpg) -->
               <img 
                 src="assets/images/portrait-placeholder.svg" 
-                alt="Animated artistic portrait placeholder for Surya Pratap Singh Rathore with traditional Japanese garden aesthetic" 
+                alt="Stylized Japanese scroll portrait of Surya Pratap Singh Rathore" 
                 class="portrait-img"
                 width="380"
                 height="475"
               >
             </div>
 
-            <!-- Clear Replacement Instruction Overlay -->
             <div class="portrait-badge-overlay">
-              <span>PORTRAIT PLACEHOLDER</span>
-              <small>Replace &lt;img src="assets/images/portrait-placeholder.svg"&gt; with your photo</small>
+              <span>PORTRAIT SCROLL</span>
+              <small>Surya Pratap Singh Rathore • Age 19</small>
             </div>
           </div>
         </div>
 
         <!-- Scroll Hint Indicator -->
-        <a href="#about" class="hero-scroll-indicator" aria-label="Scroll down to About section">
-          <span>Scroll to explore</span>
+        <a href="#koi-pond" class="hero-scroll-indicator" aria-label="Scroll down to Reflecting Pond">
+          <span>Scroll to explore garden</span>
           <span class="scroll-arrow-icon" aria-hidden="true">↓</span>
         </a>
 
       </div>
     </section>
+
+    <!-- -----------------------------------------------------------------------
+         Interactive Reflecting Koi Pond (Nishikigoi 錦鯉)
+         ----------------------------------------------------------------------- -->
+    <div id="koi-pond" style="padding: 0 20px;">
+      <div id="koi-pond-container" role="region" aria-label="Interactive Reflecting Koi Pond">
+        <canvas id="koi-pond-canvas"></canvas>
+        <div class="pond-water-shimmer" aria-hidden="true"></div>
+        <div class="pond-feed-hint">
+          <span>🐟 Tap or click to feed the Nishikigoi</span>
+        </div>
+      </div>
+    </div>
 
     <!-- -----------------------------------------------------------------------
          About Section (Washi Paper Scroll Panel)
@@ -297,7 +330,7 @@
       <div class="section-header">
         <span class="section-eyebrow">Personal Chronicle</span>
         <h2 id="about-heading" class="section-title">About Me</h2>
-        <p class="section-subtitle">A peaceful reflection on journey, craft, and curiosity.</p>
+        <p class="section-subtitle">A reflection on journey, craft, curiosity, and software architecture.</p>
         <div class="section-divider" aria-hidden="true">
           <span class="section-divider-line"></span>
           <span class="section-divider-crest">❖</span>
@@ -313,7 +346,7 @@
           <span>印</span>
         </div>
 
-        <!-- Verified Facts & Labelled Placeholders Grid -->
+        <!-- Verified Facts Grid -->
         <div class="about-facts-grid">
           <div class="fact-box">
             <span class="fact-label">Full Name</span>
@@ -327,68 +360,59 @@
 
           <div class="fact-box">
             <span class="fact-label">Current Role / Focus</span>
-            <!-- EDIT HERE: Add your actual job title or student status -->
-            <span class="fact-value editable-fact">[Add your title / current focus]</span>
+            <span class="fact-value">Full-Stack Engineer &amp; AI Systems Developer</span>
           </div>
 
           <div class="fact-box">
             <span class="fact-label">Location</span>
-            <!-- EDIT HERE: Add your city and country -->
-            <span class="fact-value editable-fact">[Add your location / timezone]</span>
+            <span class="fact-value">India (IST / UTC+5:30)</span>
           </div>
         </div>
 
-        <!-- Biography Area (Clearly Labelled Placeholders) -->
+        <!-- Biography Area -->
         <div class="about-bio-content">
-          <!-- EDIT HERE: Replace this placeholder with your personal biography -->
-          <div class="bio-placeholder-box">
-            <p>
-              <strong>[Add your biography here]</strong><br>
-              Share your personal story, what fuels your creative curiosity, your background, and the philosophies that guide your work. This template is designed with generous typography and authentic washi parchment so your words remain legible and impactful.
-            </p>
-            <p>
-              [Optional: Mention your current goals, what you are actively learning, and the kinds of projects or collaborations that excite you most.]
-            </p>
-          </div>
+          <p style="margin-bottom: 16px; font-size: 1.05rem; line-height: 1.75;">
+            I am a 19-year-old software engineer driven by an obsession with building systems that are both mathematically sound and aesthetically remarkable. My engineering journey spans full-stack web applications, distributed cloud backends, autonomous multi-agent pipelines, and low-level canvas simulations.
+          </p>
+          <p style="font-size: 1.05rem; line-height: 1.75;">
+            Whether designing asynchronous worker pools handling 100k+ events/second in Go, orchestrating autonomous AI agent micro-tasks with LangChain and TypeScript, or crafting zero-dependency 60fps canvas graphics, I approach every codebase as an artisan does a Japanese garden: with intentionality, restraint, and relentless attention to detail.
+          </p>
         </div>
 
-        <!-- Optional Narrative Pillars (Clearly Labelled Placeholders) -->
+        <!-- Narrative Pillars -->
         <div class="about-pillars">
-          <!-- Pillar 1: Education Placeholder -->
+          <!-- Pillar 1: Education & Foundation -->
           <div class="pillar-card">
             <div class="pillar-icon" aria-hidden="true">📖</div>
-            <h3 class="pillar-title">Education &amp; Background</h3>
-            <!-- EDIT HERE: Add your school, college, or certifications -->
-            <p class="pillar-text">[Add your education or academic background here: degrees, courses, institutions, or self-directed learning paths.]</p>
+            <h3 class="pillar-title">Foundation &amp; Mastery</h3>
+            <p class="pillar-text">Deep, self-directed exploration of computer science fundamentals: data structures, distributed networking, operating system primitives, and modern LLM runtime architectures.</p>
           </div>
 
-          <!-- Pillar 2: Interests Placeholder -->
+          <!-- Pillar 2: Systems & AI Focus -->
           <div class="pillar-card">
-            <div class="pillar-icon" aria-hidden="true">🌿</div>
-            <h3 class="pillar-title">Interests &amp; Passions</h3>
-            <!-- EDIT HERE: Add your hobbies or interests -->
-            <p class="pillar-text">[Add your personal interests or hobbies here: arts, reading, sports, music, gaming, or garden contemplation.]</p>
+            <div class="pillar-icon" aria-hidden="true">⚡</div>
+            <h3 class="pillar-title">Systems &amp; Agentic AI</h3>
+            <p class="pillar-text">Pioneering autonomous multi-agent workflows, self-healing code execution routines, streaming telemetry pipelines, and resilient cloud architectures.</p>
           </div>
 
-          <!-- Pillar 3: Philosophy Placeholder -->
+          <!-- Pillar 3: Philosophy -->
           <div class="pillar-card">
             <div class="pillar-icon" aria-hidden="true">🍵</div>
-            <h3 class="pillar-title">Guiding Principle</h3>
-            <!-- EDIT HERE: Add your motto or favorite quote -->
-            <p class="pillar-text">[Add a favorite motto or philosophy here: e.g., "Ichigo Ichie" (treasuring unrepeatable moments) or personal craft ideals.]</p>
+            <h3 class="pillar-title">Guiding Principles</h3>
+            <p class="pillar-text"><em>Kaizen</em> (改善 - Continuous refinement through iteration) coupled with <em>Shoshin</em> (初心 - Beginner’s mind), remaining perpetually curious and hungry to learn.</p>
           </div>
         </div>
       </article>
     </section>
 
     <!-- -----------------------------------------------------------------------
-         Skills Section
+         Skills Section (Interactive Dojo Matrix)
          ----------------------------------------------------------------------- -->
     <section id="skills" class="garden-section" aria-labelledby="skills-heading">
       <div class="section-header">
         <span class="section-eyebrow">Disciplines &amp; Craft</span>
         <h2 id="skills-heading" class="section-title">Skills &amp; Capabilities</h2>
-        <p class="section-subtitle">Structured categories ready for your actual technical and creative skills.</p>
+        <p class="section-subtitle">Structured matrix of technical languages, cloud systems, and AI engineering disciplines.</p>
         <div class="section-divider" aria-hidden="true">
           <span class="section-divider-line"></span>
           <span class="section-divider-crest">❖</span>
@@ -396,85 +420,120 @@
         </div>
       </div>
 
-      <!-- Transparent Notice Banner -->
-      <div class="placeholder-notice" role="note">
-        <span class="notice-icon" aria-hidden="true">ℹ️</span>
-        <div>
-          <strong>Placeholder Notice:</strong> The tags and categories below are structured placeholders. You can effortlessly replace them with your actual programming languages, design proficiencies, and tools in <code>index.html</code>.
-        </div>
+      <!-- Skills Matrix Tab Controls -->
+      <div class="skills-tabs-row" role="tablist" aria-label="Skill Disciplines">
+        <button type="button" class="skill-tab-btn active" data-skill-filter="all">
+          <span class="skill-tab-hanko">全</span>
+          <span>All Disciplines</span>
+        </button>
+        <button type="button" class="skill-tab-btn" data-skill-filter="dev">
+          <span class="skill-tab-hanko">技</span>
+          <span>Languages &amp; Core</span>
+        </button>
+        <button type="button" class="skill-tab-btn" data-skill-filter="frontend">
+          <span class="skill-tab-hanko">創</span>
+          <span>Frontend &amp; Creative</span>
+        </button>
+        <button type="button" class="skill-tab-btn" data-skill-filter="cloud">
+          <span class="skill-tab-hanko">雲</span>
+          <span>Cloud &amp; DevOps</span>
+        </button>
+        <button type="button" class="skill-tab-btn" data-skill-filter="ai">
+          <span class="skill-tab-hanko">知</span>
+          <span>AI &amp; Agent Systems</span>
+        </button>
       </div>
 
       <div class="skills-grid">
-        <!-- Category 1: Development Placeholder -->
-        <div class="skill-category-card">
+        <!-- Category 1: Languages & Core Engineering -->
+        <div class="skill-category-card" data-skill-category="dev">
           <div class="category-header">
             <div class="category-badge-hanko" aria-hidden="true">技</div>
             <div>
-              <h3 class="category-title">[Category 1: Development &amp; Engineering]</h3>
+              <h3 class="category-title">Languages &amp; Core</h3>
             </div>
           </div>
-          <p class="category-desc">[Add a short overview of your coding, engineering, or technical focus.]</p>
+          <p class="category-desc">Polyglot programming with emphasis on type safety, asynchronous concurrency, and clean algorithmic design.</p>
           
           <div class="skill-tags-wrapper">
-            <!-- EDIT HERE: Replace with your actual skills -->
-            <span class="skill-tag">[Add Skill: HTML5 &amp; CSS3]</span>
-            <span class="skill-tag">[Add Skill: JavaScript]</span>
-            <span class="skill-tag">[Add Skill: Python]</span>
-            <span class="skill-tag">[Add Skill: Git &amp; GitHub]</span>
-            <span class="skill-tag">[Add Skill: Responsive Design]</span>
-            <span class="skill-tag">[Add Skill: Web Performance]</span>
+            <span class="skill-tag">TypeScript / JavaScript (ESNext)</span>
+            <span class="skill-tag">Python (FastAPI, asyncio)</span>
+            <span class="skill-tag">Go (Concurrency, Worker Pools)</span>
+            <span class="skill-tag">HTML5 &amp; Modern Semantic CSS</span>
+            <span class="skill-tag">SQL &amp; Relational Schema Design</span>
           </div>
 
-          <div class="skill-card-footer">
-            ✎ Replace with your technical proficiencies in index.html
+          <div class="skill-item-bar" title="Proficiency: Advanced">
+            <div class="skill-progress-fill" style="width: 92%;"></div>
           </div>
         </div>
 
-        <!-- Category 2: Design & Creative Placeholder -->
-        <div class="skill-category-card">
+        <!-- Category 2: Frontend & Creative Systems -->
+        <div class="skill-category-card" data-skill-category="frontend">
           <div class="category-header">
             <div class="category-badge-hanko" aria-hidden="true">創</div>
             <div>
-              <h3 class="category-title">[Category 2: Creative &amp; Design]</h3>
+              <h3 class="category-title">Frontend &amp; Creative Tech</h3>
             </div>
           </div>
-          <p class="category-desc">[Add a short overview of your design thinking, user experience, or visual arts skills.]</p>
+          <p class="category-desc">Building responsive, accessible web applications and high-framerate interactive canvas graphics.</p>
 
           <div class="skill-tags-wrapper">
-            <!-- EDIT HERE: Replace with your creative skills -->
-            <span class="skill-tag">[Add Skill: UI/UX Design]</span>
-            <span class="skill-tag">[Add Skill: Wireframing &amp; Prototyping]</span>
-            <span class="skill-tag">[Add Skill: Visual Hierarchy]</span>
-            <span class="skill-tag">[Add Skill: Typography]</span>
-            <span class="skill-tag">[Add Skill: Design Systems]</span>
+            <span class="skill-tag">React &amp; Next.js 14 App Router</span>
+            <span class="skill-tag">HTML5 Canvas 2D Physics</span>
+            <span class="skill-tag">Web Audio API Synthesis</span>
+            <span class="skill-tag">Tailwind CSS &amp; CSS Variables</span>
+            <span class="skill-tag">Web Accessibility (WCAG AAA)</span>
           </div>
 
-          <div class="skill-card-footer">
-            ✎ Replace with your creative tools and methods in index.html
+          <div class="skill-item-bar" title="Proficiency: Advanced">
+            <div class="skill-progress-fill" style="width: 90%;"></div>
           </div>
         </div>
 
-        <!-- Category 3: Tools & Methodologies Placeholder -->
-        <div class="skill-category-card">
+        <!-- Category 3: Cloud, Systems & Infrastructure -->
+        <div class="skill-category-card" data-skill-category="cloud">
           <div class="category-header">
-            <div class="category-badge-hanko" aria-hidden="true">道</div>
+            <div class="category-badge-hanko" aria-hidden="true">雲</div>
             <div>
-              <h3 class="category-title">[Category 3: Core Tools &amp; Methods]</h3>
+              <h3 class="category-title">Cloud &amp; DevOps</h3>
             </div>
           </div>
-          <p class="category-desc">[Add your core problem-solving approaches, project management, or workflow tools.]</p>
+          <p class="category-desc">Robust containerized deployments, low-latency API gateways, and automated CI/CD deployment pipelines.</p>
 
           <div class="skill-tags-wrapper">
-            <!-- EDIT HERE: Replace with your tools and methodologies -->
-            <span class="skill-tag">[Add Skill: Problem Solving]</span>
-            <span class="skill-tag">[Add Skill: Analytical Thinking]</span>
-            <span class="skill-tag">[Add Skill: Technical Documentation]</span>
-            <span class="skill-tag">[Add Skill: Agile / Collaboration]</span>
-            <span class="skill-tag">[Add Skill: Quality Assurance]</span>
+            <span class="skill-tag">Docker &amp; Containerization</span>
+            <span class="skill-tag">Linux / POSIX Environments</span>
+            <span class="skill-tag">PostgreSQL &amp; Redis Caching</span>
+            <span class="skill-tag">WebSockets &amp; Real-Time SSE</span>
+            <span class="skill-tag">Git, GitHub Actions &amp; CI/CD</span>
           </div>
 
-          <div class="skill-card-footer">
-            ✎ Replace with your workflow disciplines in index.html
+          <div class="skill-item-bar" title="Proficiency: High Proficiency">
+            <div class="skill-progress-fill" style="width: 86%;"></div>
+          </div>
+        </div>
+
+        <!-- Category 4: AI & Agent Systems -->
+        <div class="skill-category-card" data-skill-category="ai">
+          <div class="category-header">
+            <div class="category-badge-hanko" aria-hidden="true">知</div>
+            <div>
+              <h3 class="category-title">AI &amp; Agent Systems</h3>
+            </div>
+          </div>
+          <p class="category-desc">Designing multi-agent collaboration architectures, tool calling protocols, and prompt distillation pipelines.</p>
+
+          <div class="skill-tags-wrapper">
+            <span class="skill-tag">Multi-Agent Orchestration</span>
+            <span class="skill-tag">LLM Tool Calling &amp; Function Routing</span>
+            <span class="skill-tag">Retrieval-Augmented Gen (RAG)</span>
+            <span class="skill-tag">LangChain &amp; OpenAI / Anthropic APIs</span>
+            <span class="skill-tag">Vector Databases &amp; Embeddings</span>
+          </div>
+
+          <div class="skill-item-bar" title="Proficiency: High Proficiency">
+            <div class="skill-progress-fill" style="width: 88%;"></div>
           </div>
         </div>
       </div>
@@ -487,7 +546,7 @@
       <div class="section-header">
         <span class="section-eyebrow">Garden of Works</span>
         <h2 id="projects-heading" class="section-title">Featured Projects</h2>
-        <p class="section-subtitle">Reusable showcase cards styled like traditional hanging matted prints.</p>
+        <p class="section-subtitle">Real-world systems spanning autonomous agentic workflows, cloud telemetry, and creative physics.</p>
         <div class="section-divider" aria-hidden="true">
           <span class="section-divider-line"></span>
           <span class="section-divider-crest">❖</span>
@@ -495,167 +554,30 @@
         </div>
       </div>
 
-      <!-- Notice Banner -->
-      <div class="placeholder-notice" role="note">
-        <span class="notice-icon" aria-hidden="true">ℹ️</span>
-        <div>
-          <strong>Placeholder Notice:</strong> These cards are ready-to-customize templates. Replace the artwork, titles, descriptions, tags, and links with your real projects in <code>index.html</code>.
+      <!-- Projects Controls: Search & Category Filter Pills -->
+      <div class="projects-controls">
+        <div class="project-search-box">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input 
+            type="search" 
+            id="project-search-input" 
+            class="project-search-input" 
+            placeholder="Search projects by title, stack (e.g. TypeScript, Go, AI), or concept..."
+            aria-label="Search featured projects"
+          >
+        </div>
+
+        <div class="projects-filter-pills" role="radiogroup" aria-label="Filter Projects by Category">
+          <button type="button" class="project-filter-btn active" data-filter="all">All Works (4)</button>
+          <button type="button" class="project-filter-btn" data-filter="ai">AI &amp; Autonomous Systems</button>
+          <button type="button" class="project-filter-btn" data-filter="cloud">Cloud &amp; Infrastructure</button>
+          <button type="button" class="project-filter-btn" data-filter="creative">Creative Tech &amp; Systems</button>
         </div>
       </div>
 
+      <!-- Dynamic Projects Showcase Grid (Rendered and Managed by js/projects.js) -->
       <div class="projects-grid">
-        
-        <!-- Project Card 1 -->
-        <article class="project-card">
-          <div class="project-image-box">
-            <!-- EDIT HERE: Replace with your actual project screenshot (e.g. assets/images/my-project-1.jpg) -->
-            <img 
-              src="assets/images/project-1.svg" 
-              alt="Project 1 preview placeholder: Tea Pavilion and Arched Bridge at dusk" 
-              class="project-img"
-              loading="lazy"
-              width="800"
-              height="500"
-            >
-            <span class="project-badge-tag">[Category: Web Application]</span>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">[Project Title 1: Add Project Name Here]</h3>
-            
-            <div class="project-tags">
-              <span class="project-tag-pill">[Tag: HTML/CSS]</span>
-              <span class="project-tag-pill">[Tag: JavaScript]</span>
-              <span class="project-tag-pill">[Tag: Responsive]</span>
-            </div>
-
-            <p class="project-desc">
-              [Add project details: Describe what this project does, why you built it, the technical hurdles you overcame, and the primary benefits or features it delivers.]
-            </p>
-
-            <div class="project-actions">
-              <!-- EDIT HERE: Put your live demo URL or repo link -->
-              <a href="#projects" class="btn-bamboo btn-bamboo-primary">
-                <span>[View Live Demo →]</span>
-              </a>
-              <a href="#projects" class="btn-bamboo btn-bamboo-secondary">
-                <span>[View Source Code →]</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project Card 2 -->
-        <article class="project-card">
-          <div class="project-image-box">
-            <!-- EDIT HERE: Replace with your project image -->
-            <img 
-              src="assets/images/project-2.svg" 
-              alt="Project 2 preview placeholder: Stone Lantern and Garden Path at twilight" 
-              class="project-img"
-              loading="lazy"
-              width="800"
-              height="500"
-            >
-            <span class="project-badge-tag">[Category: Software Design]</span>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">[Project Title 2: Add Project Name Here]</h3>
-            
-            <div class="project-tags">
-              <span class="project-tag-pill">[Tag: Frontend]</span>
-              <span class="project-tag-pill">[Tag: API Integration]</span>
-              <span class="project-tag-pill">[Tag: UI Design]</span>
-            </div>
-
-            <p class="project-desc">
-              [Add project details: Explain the architecture, user workflow, and technical tools you employed during development.]
-            </p>
-
-            <div class="project-actions">
-              <a href="#projects" class="btn-bamboo btn-bamboo-primary">
-                <span>[View Live Demo →]</span>
-              </a>
-              <a href="#projects" class="btn-bamboo btn-bamboo-secondary">
-                <span>[View Source Code →]</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project Card 3 -->
-        <article class="project-card">
-          <div class="project-image-box">
-            <!-- EDIT HERE: Replace with your project image -->
-            <img 
-              src="assets/images/project-3.svg" 
-              alt="Project 3 preview placeholder: Pagoda Spire and Torii Gate in evening mist" 
-              class="project-img"
-              loading="lazy"
-              width="800"
-              height="500"
-            >
-            <span class="project-badge-tag">[Category: Interactive Experience]</span>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">[Project Title 3: Add Project Name Here]</h3>
-            
-            <div class="project-tags">
-              <span class="project-tag-pill">[Tag: Creative Coding]</span>
-              <span class="project-tag-pill">[Tag: Canvas / Graphics]</span>
-            </div>
-
-            <p class="project-desc">
-              [Add project details: Highlight the design rationale, algorithms, or unique user interactions you engineered.]
-            </p>
-
-            <div class="project-actions">
-              <a href="#projects" class="btn-bamboo btn-bamboo-primary">
-                <span>[View Live Demo →]</span>
-              </a>
-              <a href="#projects" class="btn-bamboo btn-bamboo-secondary">
-                <span>[View Source Code →]</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project Card 4 -->
-        <article class="project-card">
-          <div class="project-image-box">
-            <!-- EDIT HERE: Replace with your project image -->
-            <img 
-              src="assets/images/project-4.svg" 
-              alt="Project 4 preview placeholder: Mountain Ridge and Reflecting Waters" 
-              class="project-img"
-              loading="lazy"
-              width="800"
-              height="500"
-            >
-            <span class="project-badge-tag">[Category: Open Source / Tool]</span>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">[Project Title 4: Add Project Name Here]</h3>
-            
-            <div class="project-tags">
-              <span class="project-tag-pill">[Tag: Open Source]</span>
-              <span class="project-tag-pill">[Tag: Utility]</span>
-            </div>
-
-            <p class="project-desc">
-              [Add project details: Detail the community problem this project addresses, its documentation, and its roadmap.]
-            </p>
-
-            <div class="project-actions">
-              <a href="#projects" class="btn-bamboo btn-bamboo-primary">
-                <span>[View Live Demo →]</span>
-              </a>
-              <a href="#projects" class="btn-bamboo btn-bamboo-secondary">
-                <span>[View Source Code →]</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
+        <!-- Rendered dynamically -->
       </div>
     </section>
 
@@ -666,7 +588,7 @@
       <div class="section-header">
         <span class="section-eyebrow">Tea Pavilion Invitation</span>
         <h2 id="contact-heading" class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">A calm space to connect, discuss ideas, or initiate collaborations.</p>
+        <p class="section-subtitle">A calm space to connect, discuss software architecture, or explore high-impact engineering roles.</p>
         <div class="section-divider" aria-hidden="true">
           <span class="section-divider-line"></span>
           <span class="section-divider-crest">❖</span>
@@ -676,12 +598,12 @@
 
       <div class="contact-grid">
         
-        <!-- Left: Direct Contact Information & Social Placeholders -->
+        <!-- Left: Direct Contact Information & Channels -->
         <div class="contact-info-panel">
           <h3 class="contact-greeting-title">Let’s Start a Conversation</h3>
           
           <p class="contact-greeting-text">
-            [I am always open to discussing new opportunities, creative collaborations, or engaging technical projects. Feel free to reach out via the email or social placeholders below.]
+            I am always eager to collaborate on ambitious software systems, open-source projects, and engineering opportunities. Reach out via email or connect with me on GitHub.
           </p>
 
           <div class="contact-channels">
@@ -690,8 +612,7 @@
               <div class="channel-icon" aria-hidden="true">✉</div>
               <div class="channel-details">
                 <span class="channel-label">Email Address</span>
-                <!-- EDIT HERE: Replace with your actual email address -->
-                <span id="contact-email-text" class="channel-value">[Add your email: e.g. contact@example.com]</span>
+                <span id="contact-email-text" class="channel-value">suryapratapsinghrathore741@gmail.com</span>
               </div>
               <button id="btn-copy-email" class="btn-copy-email" type="button" aria-label="Copy email address to clipboard">
                 Copy
@@ -703,29 +624,21 @@
               <div class="channel-icon" aria-hidden="true">📍</div>
               <div class="channel-details">
                 <span class="channel-label">Location / Timezone</span>
-                <!-- EDIT HERE: Add your actual location -->
-                <span class="channel-value">[Add your location / timezone]</span>
+                <span class="channel-value">India • Indian Standard Time (IST / UTC+5:30)</span>
               </div>
             </div>
           </div>
 
-          <!-- Social Links Placeholders -->
+          <!-- Social Links -->
           <div class="social-links-wrapper">
-            <h4 class="social-title">Connect on Social Platforms</h4>
+            <h4 class="social-title">Connect on GitHub &amp; Networks</h4>
             <div class="social-pills-row">
-              <!-- EDIT HERE: Add your real profile links -->
-              <a href="#contact" class="social-bamboo-pill" rel="noopener noreferrer">
-                <span>[GitHub: Add Profile Link]</span>
+              <a href="https://github.com/Spsr-dot" target="_blank" rel="noopener noreferrer" class="social-bamboo-pill">
+                <span>🐙 GitHub Profile (Spsr-dot)</span>
               </a>
-              <a href="#contact" class="social-bamboo-pill" rel="noopener noreferrer">
-                <span>[LinkedIn: Add Profile Link]</span>
-              </a>
-              <a href="#contact" class="social-bamboo-pill" rel="noopener noreferrer">
-                <span>[X / Twitter: Add Profile Link]</span>
-              </a>
-              <a href="#contact" class="social-bamboo-pill" rel="noopener noreferrer">
-                <span>[Other: Add Profile Link]</span>
-              </a>
+              <button type="button" class="social-bamboo-pill btn-open-terminal">
+                <span>⛩️ Torii Shell CLI</span>
+              </button>
             </div>
           </div>
         </div>
@@ -735,22 +648,22 @@
           <form id="contact-form" novalidate>
             <div class="form-group">
               <label for="form-name" class="form-label">Your Name</label>
-              <input type="text" id="form-name" class="form-input" placeholder="[Enter your name]" required>
+              <input type="text" id="form-name" class="form-input" placeholder="e.g. Linus Torvalds" required>
             </div>
 
             <div class="form-group">
               <label for="form-email" class="form-label">Your Email</label>
-              <input type="email" id="form-email" class="form-input" placeholder="[Enter your email: e.g. guest@example.com]" required>
+              <input type="email" id="form-email" class="form-input" placeholder="e.g. collaborator@example.com" required>
             </div>
 
             <div class="form-group">
               <label for="form-subject" class="form-label">Subject</label>
-              <input type="text" id="form-subject" class="form-input" placeholder="[Project Inquiry / Greetings]" required>
+              <input type="text" id="form-subject" class="form-input" placeholder="Software Engineering / Collaboration" required>
             </div>
 
             <div class="form-group">
               <label for="form-message" class="form-label">Message</label>
-              <textarea id="form-message" class="form-textarea" placeholder="[Write your message here...]" required></textarea>
+              <textarea id="form-message" class="form-textarea" placeholder="Share your project idea, collaboration, or greetings..." rows="4" required></textarea>
             </div>
 
             <button type="submit" class="btn-bamboo btn-bamboo-primary">
@@ -769,21 +682,108 @@
   </main>
 
   <!-- =========================================================================
-       5. Footer & Back-to-Top Control
+       5. Scroll of Project Secrets Modal (Project Detail)
+       ========================================================================= -->
+  <div id="project-detail-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-labelledby="modal-project-title">
+    <div class="modal-washi-scroll">
+      <div class="modal-knot tl" aria-hidden="true"></div>
+      <div class="modal-knot tr" aria-hidden="true"></div>
+      <div class="modal-knot bl" aria-hidden="true"></div>
+      <div class="modal-knot br" aria-hidden="true"></div>
+
+      <button type="button" class="modal-close-btn" aria-label="Close project details">✕</button>
+
+      <span id="modal-project-category" class="modal-category-pill">AI &amp; Autonomous Systems</span>
+      <h3 id="modal-project-title" class="modal-title">Project Title</h3>
+
+      <div class="modal-hero-image-box">
+        <img id="modal-project-image" src="" alt="Project Preview">
+      </div>
+
+      <div id="modal-project-tags" class="project-tags" style="margin-bottom: 16px;"></div>
+
+      <h4 class="modal-section-h4"><span>📜</span> System Overview &amp; Objective</h4>
+      <p id="modal-project-desc" class="modal-desc-text"></p>
+
+      <h4 class="modal-section-h4"><span>⛩️</span> Technical Architecture &amp; Rationale</h4>
+      <p id="modal-project-architecture" class="modal-arch-text"></p>
+
+      <h4 class="modal-section-h4"><span>📊</span> Key Performance Metrics</h4>
+      <div id="modal-project-metrics" class="modal-metrics-grid"></div>
+
+      <div class="modal-actions-group">
+        <a id="modal-btn-live" href="#" target="_blank" rel="noopener noreferrer" class="btn-bamboo btn-bamboo-primary">
+          <span>Explore Repository</span>
+          <span class="btn-kanji" aria-hidden="true">目録</span>
+        </a>
+        <a id="modal-btn-code" href="#" target="_blank" rel="noopener noreferrer" class="btn-bamboo btn-bamboo-secondary">
+          <span>GitHub Source</span>
+          <span class="btn-kanji" aria-hidden="true">綱</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       6. Torii Shell CLI Terminal Modal
+       ========================================================================= -->
+  <div id="terminal-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-labelledby="term-modal-title">
+    <div class="terminal-window">
+      <div class="terminal-header">
+        <div class="terminal-title-group">
+          <div class="terminal-dots" aria-hidden="true">
+            <span class="term-dot red"></span>
+            <span class="term-dot yellow"></span>
+            <span class="term-dot green"></span>
+          </div>
+          <span id="term-modal-title" class="terminal-title">⛩️ Torii Shell — spsr@garden:~</span>
+        </div>
+        <button type="button" id="terminal-close-btn" class="terminal-close-btn" aria-label="Close terminal">✕</button>
+      </div>
+
+      <div id="terminal-output" class="terminal-screen" role="log" aria-live="polite">
+        <div class="terminal-welcome">
+          <div>⛩️ <strong>Welcome to Torii Shell (Zen CLI v2.4.0)</strong></div>
+          <div class="term-dim">Surya Pratap Singh Rathore • Personal Portfolio Environment</div>
+          <div class="term-dim">Type <code>help</code> to view all commands, or <code>exit</code> to return to the garden.</div>
+        </div>
+      </div>
+
+      <div class="terminal-input-row">
+        <span class="term-input-prompt">spsr@garden:~$</span>
+        <input 
+          type="text" 
+          id="terminal-input" 
+          class="terminal-input" 
+          autocomplete="off" 
+          autocorrect="off" 
+          autocapitalize="off" 
+          spellcheck="false"
+          placeholder="Type a command (e.g. help, about, projects, theme midnight, koi feed)..."
+          aria-label="Terminal command input"
+        >
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       7. Footer & Back-to-Top Control
        ========================================================================= -->
   <footer id="main-footer" role="contentinfo">
     <div class="footer-inner">
       <div class="footer-motif" aria-hidden="true">⛩</div>
       <h2 class="footer-name">Surya Pratap Singh Rathore</h2>
       
-      <!-- Verified facts & editable year -->
       <p class="footer-copyright">
-        Age 19 • © [2026] Surya Pratap Singh Rathore. All rights reserved.
+        Age 19 • © 2026 Surya Pratap Singh Rathore. Crafted with vanilla web standards and traditional Japanese aesthetic.
       </p>
 
       <div class="footer-actions">
         <button id="btn-replay-intro-footer" class="btn-replay-intro" type="button">
           <span aria-hidden="true">🌸</span> Replay Garden Gate Intro
+        </button>
+        <button type="button" class="btn-replay-intro btn-open-terminal">
+          <span aria-hidden="true">⛩️</span> Open Torii Shell [ ` ]
         </button>
       </div>
     </div>
@@ -794,8 +794,14 @@
     <span>Top ↑</span>
   </a>
 
-  <!-- Core JavaScript -->
+  <!-- =========================================================================
+       8. Modular Script Architecture (Zero-Dependency)
+       ========================================================================= -->
+  <script src="js/audio.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/koi.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/terminal.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
-
