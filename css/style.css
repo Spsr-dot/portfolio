@@ -193,55 +193,20 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   3. Katana Desktop Cursor & Slash Mechanics
+   3. Clean Desktop Pointer & Interactive Tactile Response
+   (Slicing click animation removed as requested)
    -------------------------------------------------------------------------- */
 @media (hover: hover) and (pointer: fine) {
   body {
-    cursor: url('../assets/icons/katana-cursor.svg') 3 3, auto;
+    cursor: default;
   }
-  a, button, input, textarea, select, .btn-bamboo, .nav-bamboo-btn {
-    cursor: url('../assets/icons/katana-cursor.svg') 3 3, pointer;
-  }
-}
-
-/* Dynamic Slash Effect Overlay for Clicks */
-#katana-slash-container {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9998;
-  overflow: hidden;
-}
-
-.slash-spark {
-  position: absolute;
-  width: 120px;
-  height: 3px;
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%, #ffd1dc 70%, rgba(255,209,220,0) 100%);
-  border-radius: 2px;
-  box-shadow: 0 0 10px 2px rgba(255, 209, 220, 0.9), 0 0 20px rgba(212, 175, 55, 0.6);
-  pointer-events: none;
-  transform-origin: center center;
-  animation: katanaSlashAnim 0.24s var(--ease-slash) forwards;
-}
-
-@keyframes katanaSlashAnim {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -50%) rotate(-35deg) scaleX(0.2);
-  }
-  30% {
-    opacity: 1;
-    transform: translate(-50%, -50%) rotate(-35deg) scaleX(1.4);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, -50%) rotate(-35deg) scaleX(1.8) translateY(8px);
+  a, button, input, textarea, select, .btn-bamboo, .nav-bamboo-btn, .theme-btn, .project-filter-btn {
+    cursor: pointer;
   }
 }
 
 /* --------------------------------------------------------------------------
-   4. Gate-Opening First Visit Intro Overlay
+   4. Gate-Opening First Visit Intro Overlay (Sliding Shoji Doors from Picture 2)
    -------------------------------------------------------------------------- */
 #gate-intro {
   position: fixed;
@@ -250,9 +215,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--sky-zenith);
+  background-color: #0b0709;
   overflow: hidden;
-  transition: opacity 0.8s var(--ease-smooth), visibility 0.8s ease;
+  transition: opacity 0.85s var(--ease-smooth), visibility 0.85s ease;
 }
 
 #gate-intro.gate-hidden {
@@ -261,22 +226,24 @@ body {
   pointer-events: none;
 }
 
-/* Gate Background Dusk Atmosphere */
-.gate-scenery-backdrop {
+/* Golden crack light beam as sliding doors part */
+.gate-opening-beam {
   position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 45%, #462638 0%, #251829 45%, #0d0f1b 100%);
-  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 6px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at 50% 50%, #fffbf0 0%, #fde68a 50%, rgba(253, 230, 138, 0) 100%);
+  box-shadow: 0 0 50px 25px rgba(254, 240, 138, 0.9), 0 0 100px 50px rgba(245, 158, 11, 0.4);
+  opacity: 0;
+  z-index: 5;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
 }
 
-.gate-mist {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background: linear-gradient(to top, rgba(14, 15, 23, 0.95), transparent);
-  z-index: 2;
+#gate-intro.gate-opening .gate-opening-beam {
+  opacity: 1;
 }
 
 /* Skip Intro Button */
@@ -284,14 +251,14 @@ body {
   position: absolute;
   top: 24px;
   right: 28px;
-  z-index: 10;
-  background: rgba(22, 23, 34, 0.85);
+  z-index: 20;
+  background: rgba(22, 14, 16, 0.85);
   border: 1px solid var(--gold-deep);
   color: var(--text-on-dark-muted);
   font-family: var(--font-sans);
   font-size: 0.85rem;
   font-weight: 600;
-  padding: 8px 16px;
+  padding: 8px 18px;
   border-radius: var(--radius-sm);
   letter-spacing: 0.5px;
   backdrop-filter: blur(8px);
@@ -300,35 +267,33 @@ body {
 .btn-skip-intro:hover, .btn-skip-intro:focus {
   color: #fff;
   border-color: var(--gold-light);
-  background: rgba(40, 25, 30, 0.95);
-  box-shadow: 0 0 12px var(--lantern-glow);
+  background: rgba(50, 20, 25, 0.95);
+  box-shadow: 0 0 14px var(--lantern-glow);
 }
 
-/* The Two Sliding Gate Panels */
+/* The Two Sliding Shoji Doors (From Picture 2) */
 .gate-panel {
   position: absolute;
   top: 0;
-  width: 50.5%;
+  width: 50%;
   height: 100%;
   z-index: 4;
-  background-color: #241913;
-  box-shadow: inset 0 0 100px rgba(0,0,0,0.8), 0 0 50px rgba(0,0,0,0.7);
-  transition: transform 1.25s var(--ease-smooth);
+  background-color: #d4c5a0;
+  box-shadow: inset 0 0 40px rgba(0,0,0,0.3), 0 0 50px rgba(0,0,0,0.9);
+  transition: transform 1.35s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform;
   overflow: hidden;
 }
 
 .gate-panel-left {
   left: 0;
-  border-right: 4px solid #150e0a;
 }
 
 .gate-panel-right {
   right: 0;
-  border-left: 4px solid #150e0a;
 }
 
-/* Gate Sliding State */
+/* Sliding animation: Left door glides left, Right door glides right */
 #gate-intro.gate-opening .gate-panel-left {
   transform: translateX(-102%);
 }
@@ -339,83 +304,67 @@ body {
 
 #gate-intro.gate-opening .gate-center-plaque {
   opacity: 0;
-  transform: scale(0.92);
+  transform: scale(0.9);
   transition: opacity 0.45s ease, transform 0.45s ease;
 }
 
-/* Traditional Shoji Lattice & Cedar Framework on Gates */
-.gate-frame {
-  position: relative;
+/* Golden Mountain & Pagoda Door Panels */
+.shoji-door-visual {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  padding: 32px;
-  background: 
-    linear-gradient(rgba(38, 22, 14, 0.82), rgba(26, 16, 10, 0.92)),
-    repeating-linear-gradient(0deg, transparent, transparent 48px, rgba(212, 175, 55, 0.12) 48px, rgba(212, 175, 55, 0.12) 50px),
-    repeating-linear-gradient(90deg, transparent, transparent 48px, rgba(212, 175, 55, 0.12) 48px, rgba(212, 175, 55, 0.12) 50px);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 30px rgba(80, 60, 20, 0.35);
 }
 
-/* Translucent Washi Inserts behind Kumiko Lattice */
-.gate-washi-screen {
-  position: absolute;
-  inset: 40px;
-  background: radial-gradient(circle at 50% 50%, #f6edd9 0%, #ecdcb9 60%, #ccba94 100%);
-  opacity: 0.18;
-  border: 8px solid #3d2315;
-  box-shadow: inset 0 0 40px rgba(0,0,0,0.6);
+.left-door {
+  background-image: url('../assets/images/golden-door-left.webp'), url('../assets/images/golden-door-left.jpg');
 }
 
-/* Golden Metal Corner Brackets (Kanamono) */
-.gate-bracket {
-  position: absolute;
-  width: 44px;
-  height: 44px;
-  border: 4px solid var(--gold-warm);
-  z-index: 5;
+.right-door {
+  background-image: url('../assets/images/golden-door-right.webp'), url('../assets/images/golden-door-right.jpg');
 }
-.gate-bracket.top-left { top: 20px; left: 20px; border-right: none; border-bottom: none; }
-.gate-bracket.top-right { top: 20px; right: 20px; border-left: none; border-bottom: none; }
-.gate-bracket.bottom-left { bottom: 20px; left: 20px; border-right: none; border-top: none; }
-.gate-bracket.bottom-right { bottom: 20px; right: 20px; border-left: none; border-top: none; }
 
-/* Gate Handles (Hikite) */
-.gate-handle {
+/* Elegant Gold Door Handles */
+.shoji-handle-recess {
   position: absolute;
   top: 50%;
-  width: 38px;
-  height: 90px;
-  background: #150f0c;
-  border: 2px solid var(--gold-deep);
-  border-radius: var(--radius-sm);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.gate-panel-left .gate-handle { right: 28px; }
-.gate-panel-right .gate-handle { left: 28px; }
-.gate-handle::after {
-  content: '';
-  width: 14px;
-  height: 38px;
-  background: var(--gold-warm);
-  border-radius: 2px;
-  opacity: 0.8;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 64px;
+  background: linear-gradient(180deg, #c9a84c 0%, #a67c00 40%, #d4af37 60%, #c9a84c 100%);
+  border: 1px solid #e8d48b;
+  border-radius: 12px;
+  box-shadow: inset 0 1px 4px rgba(255,235,150,0.5), 0 2px 8px rgba(0,0,0,0.4);
+  z-index: 6;
 }
 
-/* Center Emblem & Entrance Card */
+.gate-panel-left .shoji-handle-recess {
+  right: 24px;
+}
+
+.gate-panel-right .shoji-handle-recess {
+  left: 24px;
+}
+
+/* Center Wooden Plaque with Gold Kanji Seal */
 .gate-center-plaque {
   position: relative;
-  z-index: 6;
-  max-width: 540px;
+  z-index: 10;
+  max-width: 580px;
   width: 90%;
-  padding: 42px 36px;
+  margin: 0 20px;
   text-align: center;
-  background: rgba(18, 19, 27, 0.94);
+  background: rgba(18, 12, 14, 0.94);
   border: 2px solid var(--gold-warm);
   border-radius: var(--radius-md);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.7), 0 0 30px var(--lantern-glow);
-  backdrop-filter: blur(12px);
+  padding: 42px 36px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 30px rgba(212, 175, 55, 0.25);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
@@ -569,56 +518,19 @@ body {
   letter-spacing: 0;
 }
 
-/* The Katana Cut Animation on the Bamboo Button */
-.btn-bamboo.is-slashing {
-  animation: buttonSlashCut 0.28s var(--ease-slash) forwards;
+/* Subtle Button Press Animation */
+.btn-bamboo.btn-pressed {
+  animation: buttonPressAnim 0.3s ease forwards;
 }
 
-.slash-laser {
-  position: absolute;
-  top: 50%;
-  left: -20%;
-  width: 140%;
-  height: 2px;
-  background: #ffffff;
-  box-shadow: 0 0 10px 2px #fff, 0 0 16px 4px #ffd1dc;
-  transform: translateY(-50%) rotate(-25deg) scaleX(0);
-  pointer-events: none;
-  opacity: 0;
-  z-index: 10;
-}
-
-.btn-bamboo.is-slashing .slash-laser {
-  animation: laserSweep 0.26s var(--ease-slash) forwards;
-}
-
-@keyframes laserSweep {
-  0% {
-    opacity: 0;
-    transform: translateY(-50%) rotate(-25deg) scaleX(0);
-  }
-  30% {
-    opacity: 1;
-    transform: translateY(-50%) rotate(-25deg) scaleX(1.1);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-50%) rotate(-25deg) scaleX(1.3);
-  }
-}
-
-@keyframes buttonSlashCut {
+@keyframes buttonPressAnim {
   0% {
     transform: scale(1);
     filter: brightness(1);
   }
-  35% {
-    transform: scale(0.97) skewX(2deg);
-    filter: brightness(1.4);
-  }
-  70% {
-    transform: scale(1.02) skewX(-1deg);
-    filter: brightness(1.1);
+  40% {
+    transform: scale(0.96);
+    filter: brightness(1.15);
   }
   100% {
     transform: scale(1);
@@ -627,7 +539,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   6. Layered Dusk Garden Scenery & Sakura Canvas
+   6. 4K Japanese Garden Background Scenery (Picture 1) & Canvas
    -------------------------------------------------------------------------- */
 #garden-scenery {
   position: fixed;
@@ -639,71 +551,41 @@ body {
   overflow: hidden;
 }
 
-/* Sky Gradient */
-.scenery-sky {
+/* Enhanced 4K Japanese Garden Scenic Wallpaper (Picture 1) */
+.scenery-bg-image {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, 
-    var(--sky-zenith) 0%, 
-    var(--sky-dusk-purple) 42%, 
-    var(--sky-dusk-rose) 72%, 
-    var(--sky-horizon) 100%
-  );
-}
-
-/* Distant Moon & Halo */
-.scenery-moon {
-  position: absolute;
-  top: 8%;
-  right: 18%;
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #fff9e6 0%, #fae6b2 60%, rgba(250, 230, 178, 0) 100%);
-  box-shadow: 0 0 60px 20px rgba(250, 230, 178, 0.22);
-  opacity: 0.85;
-}
-
-/* Mountain & Misty Ridge SVG layer */
-.scenery-layer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  will-change: transform;
-}
-
-.scenery-mountains {
-  height: 48%;
-  opacity: 0.65;
-}
-
-/* Distant Japanese Tea House & Garden Structures */
-.scenery-architecture {
-  height: 38%;
-  opacity: 0.88;
-}
-
-/* Warm Shoji Window Glow in the Japanese House */
-.window-lantern-glow {
-  animation: lanternFlicker 4s ease-in-out infinite alternate;
-}
-
-@keyframes lanternFlicker {
-  0% { opacity: 0.75; }
-  50% { opacity: 0.95; }
-  100% { opacity: 0.82; }
-}
-
-/* Foreground Branch Framing (Framing without obscuring text) */
-.scenery-branches {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  background-image: url('../assets/images/garden-background-4k.webp'), url('../assets/images/garden-background-4k.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  transform: scale(1.02);
+  transition: filter 0.8s var(--ease-smooth);
+}
+
+/* Atmospheric dynamic theme lighting adjustments */
+[data-theme="midnight"] .scenery-bg-image {
+  filter: brightness(0.48) hue-rotate(-22deg) saturate(0.85);
+}
+
+[data-theme="dawn"] .scenery-bg-image {
+  filter: brightness(0.95) saturate(1.1) hue-rotate(10deg);
+}
+
+[data-theme="day"] .scenery-bg-image {
+  filter: brightness(1.05) saturate(1.15);
+}
+
+/* High-contrast atmospheric vignette overlay to ensure text readability */
+.scenery-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 50% 38%, rgba(10, 13, 26, 0.12) 0%, rgba(10, 13, 26, 0.72) 100%),
+    linear-gradient(to bottom, rgba(10, 13, 26, 0.35) 0%, transparent 40%, rgba(10, 13, 26, 0.88) 100%);
   pointer-events: none;
-  opacity: 0.78;
 }
 
 /* Fullscreen Canvas for Falling Sakura Petals */
@@ -2585,10 +2467,6 @@ body {
 
   .portrait-frame {
     animation: none !important;
-  }
-
-  .slash-spark {
-    display: none !important;
   }
 
   #sakura-canvas {

@@ -61,7 +61,7 @@
 
   if (btnEnterPortfolio) {
     btnEnterPortfolio.addEventListener('click', () => {
-      triggerButtonSlash(btnEnterPortfolio);
+      triggerButtonPress(btnEnterPortfolio);
       setTimeout(() => openGate(true), 120);
     });
   }
@@ -85,36 +85,24 @@
   }
 
   // ---------------------------------------------------------------------------
-  // 3. Katana Cut Interaction on Bamboo Buttons
+  // 3. Tactile Button Interaction (Slicing laser line removed)
   // ---------------------------------------------------------------------------
-  function triggerButtonSlash(element) {
+  function triggerButtonPress(element) {
     if (prefersReducedMotion.matches || !element) return;
 
-    if (window.ZenAudio) {
-      window.ZenAudio.playSlash();
-    }
-
-    let laser = element.querySelector('.slash-laser');
-    if (!laser) {
-      laser = document.createElement('span');
-      laser.className = 'slash-laser';
-      laser.setAttribute('aria-hidden', 'true');
-      element.appendChild(laser);
-    }
-
-    element.classList.remove('is-slashing');
+    element.classList.remove('btn-pressed');
     void element.offsetWidth; // Force DOM reflow
-    element.classList.add('is-slashing');
+    element.classList.add('btn-pressed');
 
     setTimeout(() => {
-      element.classList.remove('is-slashing');
-    }, 280);
+      element.classList.remove('btn-pressed');
+    }, 200);
   }
 
   const interactiveBamboo = document.querySelectorAll('.btn-bamboo, .nav-bamboo-btn');
   interactiveBamboo.forEach((el) => {
     el.addEventListener('click', function (e) {
-      triggerButtonSlash(this);
+      triggerButtonPress(this);
 
       const href = this.getAttribute('href');
       if (href && href.startsWith('#') && href.length > 1) {
@@ -125,14 +113,14 @@
             target.scrollIntoView({
               behavior: prefersReducedMotion.matches ? 'auto' : 'smooth',
             });
-          }, 110);
+          }, 80);
         }
       }
     });
 
     el.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') {
-        triggerButtonSlash(this);
+        triggerButtonPress(this);
       }
     });
 
@@ -145,44 +133,10 @@
   });
 
   // ---------------------------------------------------------------------------
-  // 4. Katana Click Slash Effect (Desktop with Fine Pointer)
+  // 4. Cursor Interaction (Click slicing animation removed as requested)
   // ---------------------------------------------------------------------------
-  const slashContainer = document.getElementById('katana-slash-container');
-
-  function spawnSlashEffect(clientX, clientY) {
-    if (prefersReducedMotion.matches || !slashContainer) return;
-
-    const spark = document.createElement('div');
-    spark.className = 'slash-spark';
-    spark.style.left = `${clientX}px`;
-    spark.style.top = `${clientY}px`;
-
-    const angle = -25 + (Math.random() * 24 - 12);
-    spark.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
-
-    slashContainer.appendChild(spark);
-
-    setTimeout(() => {
-      spark.remove();
-    }, 260);
-  }
-
-  if (hasFinePointer.matches && slashContainer) {
-    document.addEventListener('pointerdown', (e) => {
-      if (prefersReducedMotion.matches) return;
-      const tag = (e.target.tagName || '').toLowerCase();
-      if (tag === 'input' || tag === 'textarea') return;
-
-      spawnSlashEffect(e.clientX, e.clientY);
-    });
-  }
-
-  // Listen for synthetic slash events from Torii Shell
-  window.addEventListener('zen:slash', () => {
-    const cx = window.innerWidth * 0.5;
-    const cy = window.innerHeight * 0.45;
-    spawnSlashEffect(cx, cy);
-  });
+  // Slicing animation on cursor clicks has been completely removed.
+  // Standard clean pointer and smooth interactive response preserved.
 
   // ---------------------------------------------------------------------------
   // 5. Multi-Atmosphere Particle Simulation (Sakura Petals & Hotaru Fireflies)
@@ -204,7 +158,7 @@
       canvas.height = window.innerHeight;
     }
 
-    // Sakura Blossom Petal (Dusk, Dawn, Day)
+    // Realistic Sakura Blossom Petal (Dusk, Dawn, Day) — Physics strictly preserved
     class SakuraPetal {
       constructor() {
         this.reset(true);
@@ -223,23 +177,6 @@
         this.tilt = Math.random() * Math.PI;
         this.tiltSpeed = 0.02 + Math.random() * 0.03;
         this.opacity = 0.45 + Math.random() * 0.45;
-
-        if (currentAtmosphere === 'day') {
-          const isLeaf = Math.random() > 0.5;
-          this.color = isLeaf
-            ? `rgba(134, 239, 172, ${this.opacity})`
-            : `rgba(255, 235, 240, ${this.opacity})`;
-          this.shadowColor = 'rgba(74, 222, 128, 0.3)';
-        } else if (currentAtmosphere === 'dawn') {
-          this.color = `rgba(254, 205, 211, ${this.opacity})`;
-          this.shadowColor = 'rgba(251, 113, 133, 0.35)';
-        } else {
-          const isPale = Math.random() > 0.4;
-          this.color = isPale
-            ? `rgba(255, 230, 235, ${this.opacity})`
-            : `rgba(252, 165, 165, ${this.opacity})`;
-          this.shadowColor = 'rgba(244, 114, 182, 0.4)';
-        }
       }
 
       update() {
@@ -257,21 +194,71 @@
         context.save();
         context.translate(this.x, this.y);
         context.rotate((this.rotation * Math.PI) / 180);
-        context.scale(Math.cos(this.tilt), 1);
 
+        // 3D realistic tumbling flutter - strictly uses original tilt math
+        const cosTilt = Math.cos(this.tilt);
+        context.scale(cosTilt, 1);
+
+        const s = this.size;
+
+        // Realistic Sakura anatomical petal path with iconic apex cleft notch & tapered stem base
         context.beginPath();
-        context.moveTo(0, -this.size);
-        context.bezierCurveTo(this.size * 0.8, -this.size * 0.5, this.size * 0.8, this.size * 0.5, 0, this.size);
-        context.bezierCurveTo(-this.size * 0.8, this.size * 0.5, -this.size * 0.8, -this.size * 0.5, 0, -this.size);
-        context.fillStyle = this.color;
-        context.shadowColor = this.shadowColor;
+        context.moveTo(0, s * 0.58); // Tapered base attachment point
+
+        // Left curved flank to left apex lobe
+        context.bezierCurveTo(
+          -s * 0.48, s * 0.28,
+          -s * 0.55, -s * 0.22,
+          -s * 0.32, -s * 0.58
+        );
+
+        // Iconic botanical Sakura apex notch (heart cleft)
+        context.quadraticCurveTo(
+          0, -s * 0.38,
+          s * 0.32, -s * 0.58
+        );
+
+        // Right curved flank back to tapered base
+        context.bezierCurveTo(
+          s * 0.55, -s * 0.22,
+          s * 0.48, s * 0.28,
+          0, s * 0.58
+        );
+        context.closePath();
+
+        // Realistic multi-stop linear gradient from rich rose base to delicate translucent rim
+        const grad = context.createLinearGradient(0, s * 0.58, 0, -s * 0.58);
+        if (currentAtmosphere === 'day') {
+          grad.addColorStop(0, `rgba(187, 247, 208, ${this.opacity * 0.95})`);
+          grad.addColorStop(0.35, `rgba(134, 239, 172, ${this.opacity * 0.9})`);
+          grad.addColorStop(0.85, `rgba(240, 253, 244, ${this.opacity * 0.85})`);
+          grad.addColorStop(1, `rgba(255, 255, 255, ${this.opacity * 0.75})`);
+        } else {
+          // Dusk and Dawn authentic Sakura blossom hues
+          grad.addColorStop(0, `rgba(225, 29, 72, ${this.opacity * 0.95})`);     // Crimson/rose stem base
+          grad.addColorStop(0.28, `rgba(251, 113, 133, ${this.opacity * 0.9})`);  // Vibrant blossom pink
+          grad.addColorStop(0.72, `rgba(253, 232, 238, ${this.opacity * 0.88})`); // Soft cream pink
+          grad.addColorStop(1, `rgba(255, 255, 255, ${this.opacity * 0.8})`);     // Translucent frosted rim
+        }
+
+        context.fillStyle = grad;
+        context.shadowColor = 'rgba(225, 29, 72, 0.24)';
         context.shadowBlur = 4;
         context.fill();
 
+        // Subtle 3D curvature highlight along the left lobe
         context.beginPath();
-        context.moveTo(0, -this.size * 0.7);
-        context.lineTo(0, this.size * 0.5);
-        context.strokeStyle = 'rgba(255, 255, 255, 0.35)';
+        context.moveTo(0, s * 0.4);
+        context.bezierCurveTo(-s * 0.24, s * 0.1, -s * 0.26, -s * 0.2, -s * 0.14, -s * 0.45);
+        context.strokeStyle = `rgba(255, 255, 255, ${this.opacity * 0.42})`;
+        context.lineWidth = 0.75;
+        context.stroke();
+
+        // Delicate central petal vein
+        context.beginPath();
+        context.moveTo(0, s * 0.5);
+        context.quadraticCurveTo(s * 0.03, 0, 0, -s * 0.28);
+        context.strokeStyle = `rgba(244, 114, 182, ${this.opacity * 0.35})`;
         context.lineWidth = 0.6;
         context.stroke();
 
@@ -481,7 +468,7 @@
 
     btnBackToTop.addEventListener('click', (e) => {
       e.preventDefault();
-      triggerButtonSlash(btnBackToTop);
+      triggerButtonPress(btnBackToTop);
       window.scrollTo({
         top: 0,
         behavior: prefersReducedMotion.matches ? 'auto' : 'smooth',
@@ -521,7 +508,7 @@
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const submitBtn = contactForm.querySelector('button[type="submit"]');
-      if (submitBtn) triggerButtonSlash(submitBtn);
+      if (submitBtn) triggerButtonPress(submitBtn);
 
       const nameVal = document.getElementById('form-name')?.value || '';
       const emailVal = document.getElementById('form-email')?.value || '';

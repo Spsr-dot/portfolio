@@ -19,41 +19,28 @@
   <!-- Accessible Skip Link -->
   <a href="#main-content" class="skip-to-content">Skip to main content</a>
 
-  <!-- Ephemeral Slash Spark Container for Katana Clicks -->
-  <div id="katana-slash-container" aria-hidden="true"></div>
-
   <!-- =========================================================================
-       1. Gate-Opening First Visit Intro Overlay
+       1. Gate-Opening First Visit Intro Overlay (Sliding Shoji Doors from Picture 2)
        ========================================================================= -->
   <aside id="gate-intro" aria-label="Garden Gate Entrance" role="dialog">
-    <!-- Dusk Atmosphere Backdrop behind Gates -->
-    <div class="gate-scenery-backdrop" aria-hidden="true">
-      <div class="gate-mist"></div>
-    </div>
+    <!-- Golden crack light beam as doors part -->
+    <div class="gate-opening-beam" aria-hidden="true"></div>
 
     <!-- Skip Intro Control -->
     <button id="btn-skip-intro" class="btn-skip-intro" type="button" aria-label="Skip intro and view portfolio immediately">
       Skip Intro ➔
     </button>
 
-    <!-- Left Gate Panel (Sliding Shoji / Temple Cedar Door) -->
+    <!-- Left Gate Panel (Sliding Shoji Door with Hand-Painted Cherry Blossom Branch) -->
     <div class="gate-panel gate-panel-left" aria-hidden="true">
-      <div class="gate-frame">
-        <div class="gate-washi-screen"></div>
-        <div class="gate-bracket top-left"></div>
-        <div class="gate-bracket bottom-left"></div>
-        <div class="gate-handle"></div>
-      </div>
+      <div class="shoji-door-visual left-door"></div>
+      <div class="shoji-handle-recess"></div>
     </div>
 
-    <!-- Right Gate Panel (Sliding Shoji / Temple Cedar Door) -->
+    <!-- Right Gate Panel (Sliding Shoji Door with Hand-Painted Cherry Blossom Branch) -->
     <div class="gate-panel gate-panel-right" aria-hidden="true">
-      <div class="gate-frame">
-        <div class="gate-washi-screen"></div>
-        <div class="gate-bracket top-right"></div>
-        <div class="gate-bracket bottom-right"></div>
-        <div class="gate-handle"></div>
-      </div>
+      <div class="shoji-door-visual right-door"></div>
+      <div class="shoji-handle-recess"></div>
     </div>
 
     <!-- Center Wooden Plaque & Call to Action -->
@@ -71,89 +58,11 @@
   </aside>
 
   <!-- =========================================================================
-       2. Layered Japanese Garden Background & Atmospheric Scenery
+       2. 4K Japanese Garden Background Scenery (Picture 1)
        ========================================================================= -->
   <div id="garden-scenery" aria-hidden="true">
-    <!-- Dusk Sky Gradient -->
-    <div class="scenery-sky"></div>
-
-    <!-- Glowing Spring Moon -->
-    <div class="scenery-moon"></div>
-
-    <!-- Layer 1: Distant Mountain Ridges & Mist -->
-    <svg class="scenery-layer scenery-mountains" viewBox="0 0 1440 450" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 240 Q 320 160 720 210 T 1440 190 L 1440 450 L 0 450 Z" fill="#1b1c2e" opacity="0.6"/>
-      <path d="M0 290 Q 420 220 860 260 T 1440 270 L 1440 450 L 0 450 Z" fill="#131422" opacity="0.85"/>
-      <path d="M0 370 Q 500 320 1000 350 T 1440 340 L 1440 450 L 0 450 Z" fill="#0c0d16"/>
-    </svg>
-
-    <!-- Layer 2: Traditional Tea House, Stone Lantern, Arched Bridge & Reflecting Pond -->
-    <svg class="scenery-layer scenery-architecture" viewBox="0 0 1440 380" preserveAspectRatio="xMidYMax slice" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Reflecting Pond Surface -->
-      <rect y="280" width="1440" height="100" fill="#080910"/>
-      <ellipse cx="380" cy="330" rx="220" ry="24" fill="#ffcc44" opacity="0.12"/>
-      <ellipse cx="1120" cy="340" rx="90" ry="14" fill="#ffb300" opacity="0.18"/>
-
-      <!-- Traditional Japanese Tea House Silhouette -->
-      <g fill="#0e0f18">
-        <path d="M220 220 Q 380 180 540 220 L 520 205 Q 380 170 240 205 Z"/>
-        <path d="M290 175 Q 380 150 470 175 L 455 160 Q 380 142 305 160 Z"/>
-        <rect x="250" y="218" width="260" height="64"/>
-      </g>
-
-      <!-- Warm Shoji Windows with Gentle Lantern Flicker -->
-      <g class="window-lantern-glow">
-        <rect x="290" y="228" width="70" height="42" fill="#ffd15c" opacity="0.85"/>
-        <line x1="325" y1="228" x2="325" y2="270" stroke="#3a2215" stroke-width="2"/>
-        <line x1="290" y1="249" x2="360" y2="249" stroke="#3a2215" stroke-width="2"/>
-
-        <rect x="380" y="228" width="90" height="42" fill="#ffd15c" opacity="0.85"/>
-        <line x1="410" y1="228" x2="410" y2="270" stroke="#3a2215" stroke-width="2"/>
-        <line x1="440" y1="228" x2="440" y2="270" stroke="#3a2215" stroke-width="2"/>
-        <line x1="380" y1="249" x2="470" y2="249" stroke="#3a2215" stroke-width="2"/>
-      </g>
-
-      <!-- Traditional Stone Lantern (Tōrō) on right bank -->
-      <g transform="translate(1120, 200)">
-        <circle cx="0" cy="55" r="45" fill="#f59e0b" opacity="0.3" class="window-lantern-glow"/>
-        <circle cx="0" cy="55" r="22" fill="#ffd54f" opacity="0.8" class="window-lantern-glow"/>
-        <path d="M-35 45 Q 0 25 35 45 L 30 35 Q 0 18 -30 35 Z" fill="#1b1d28"/>
-        <circle cx="0" cy="18" r="5" fill="#1b1d28"/>
-        <rect x="-18" y="45" width="36" height="20" fill="#ffa000" opacity="0.9"/>
-        <rect x="-5" y="45" width="10" height="20" fill="#1b1d28"/>
-        <rect x="-8" y="65" width="16" height="35" fill="#181a24"/>
-        <path d="M-22 100 L 22 100 L 26 115 L -26 115 Z" fill="#151620"/>
-      </g>
-
-      <!-- Traditional Arched Red Bridge (Taiko-bashi) across pond center -->
-      <g transform="translate(620, 230)">
-        <path d="M0 65 Q 150 -15 300 65" fill="none" stroke="#a92a2b" stroke-width="9"/>
-        <path d="M10 65 Q 150 -5 290 65" fill="none" stroke="#781818" stroke-width="5"/>
-        <line x1="75" y1="25" x2="75" y2="65" stroke="#521010" stroke-width="3"/>
-        <line x1="150" y1="5" x2="150" y2="65" stroke="#521010" stroke-width="3"/>
-        <line x1="225" y1="25" x2="225" y2="65" stroke="#521010" stroke-width="3"/>
-      </g>
-    </svg>
-
-    <!-- Layer 3: Foreground Cherry Blossom & Pine Branches Framing Page Corners -->
-    <svg class="scenery-branches" viewBox="0 0 1440 900" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g opacity="0.85">
-        <path d="M-20 -20 Q 180 40 280 140 T 360 220" stroke="#251610" stroke-width="6" stroke-linecap="round"/>
-        <path d="M120 40 Q 180 30 220 70" stroke="#251610" stroke-width="3.5" stroke-linecap="round"/>
-        <circle cx="280" cy="140" r="14" fill="#fca5a5"/>
-        <circle cx="280" cy="140" r="5" fill="#e11d48"/>
-        <circle cx="360" cy="220" r="11" fill="#ffd1dc"/>
-        <circle cx="360" cy="220" r="4" fill="#be123c"/>
-        <circle cx="220" cy="70" r="13" fill="#fca5a5"/>
-        <circle cx="160" cy="45" r="12" fill="#ffd1dc"/>
-      </g>
-      <g opacity="0.75">
-        <path d="M1460 -20 Q 1300 30 1200 110 T 1100 170" stroke="#1b241c" stroke-width="5" stroke-linecap="round"/>
-        <circle cx="1200" cy="110" r="24" fill="#243627" opacity="0.9"/>
-        <circle cx="1100" cy="170" r="18" fill="#1c2d1f" opacity="0.9"/>
-        <circle cx="1280" cy="60" r="22" fill="#243627" opacity="0.9"/>
-      </g>
-    </svg>
+    <div class="scenery-bg-image"></div>
+    <div class="scenery-bg-overlay"></div>
   </div>
 
   <!-- Falling Sakura Petals & Hotaru Fireflies Canvas -->

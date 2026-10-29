@@ -261,3 +261,4 @@
   window.addEventListener('DOMContentLoaded', initProjects);
 
 })();
+
